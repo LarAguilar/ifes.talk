@@ -1,7 +1,9 @@
 # ifes.talk
 ---
 
-Chatbot do Instituto Federal do ES - assistente virtual para os alunos, servidores e comunidade em geral.
+Chatbot do Instituto Federal do ES - assistente virtual para os alunos, servidores e comunidade em geral. Atualmente em migração para o Rasa
+2.0. Atualização das alterações do ROD do técnico feitas para o ano de 2020 e inclusão dos assuntos relacionados aos RODs dos outros níveis
+de ensino do Ifes.
 
 * **Branch master**: código estável;
 * **Branch 2.0.x**: código em desenvolvimento de uma nova versão. Sofrerá merge na master após aprovação do coordenador.

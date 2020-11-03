@@ -1,0 +1,72 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: cumprimento
+  steps:
+  - user: |
+      oii
+    intent: cumprimento
+  - action: utter_cumprimento
+  - user: |
+      [João] {nome_usuario} 
+    intent: informar_nome
+  - action: utter_cumprimentar_usuario_nome
+  - action: listen
+- story: como estou 1
+  steps:
+  - user: |
+      como vc esta?
+    intent: como_esta
+  - action: utter_como_estou
+  - user: |
+      bem
+    intent: esta_feliz
+  - action: utter_usuario_esta_feliz
+  - action: utter_listen
+- story: como estou 2
+  steps:
+  - user: |
+      vc ta bem?
+    intent: como_esta
+  - action: utter_como_estou
+  - user: |
+      mal
+    intent: esta_triste
+  - action: utter_fica_feliz
+  - action: utter_listen
+- story: despedida
+  steps:
+  - user: |
+      tchau
+    intent: despedir
+  - action: utter_despedir
+- story: sou um bot
+  steps:
+  - user: |
+      vc é um bot??
+    intent: meu_objetivo
+  - action: utter_meu_objetivo
+
+# stories do ROD
+- story: transferencia de outra instituição para o ifes #001
+  steps:
+  - user: |
+      quero me transferir para o ifes
+    intent: transferencia_de_outra_escola
+  - action: utter_transferencia_de_outra_escola
+  - action: utter_continuar_conversa
+- story: transferencia do ifes para outra escola #002
+  steps:
+  - user: |
+      quero sair do ifes
+    intent: transferencia_para_outra_escola
+  - action: utter_transferencia_para_outra_escola
+  - action: utter_continuar_conversa
+- story: Pedir para o usuario repetir o nome porque não entende
+  steps:
+  - user: |
+      Whindersson
+    intent: informar_nome
+  - action: utter_nao_entendi
+  - intent: informar_nome
