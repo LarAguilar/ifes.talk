@@ -223,10 +223,10 @@ slots:
     type: bool
 responses:
   utter_cumprimentar_usuario_nome:
-  - text:  "{nome_usuario}, agora me fale se você é aluno(a) do ifes, servidor(a) do ifes ou não é do ifes:"
+  - text:  "Muito prazer, {nome_usuario}! Agora, me fala se você é aluno(a) do ifes, servidor(a) do ifes ou não é do ifes:"
   utter_despedir:
-  - text: "Foi um prazer te ajudar! \nSempre que tiver alguma dúvida, volte aqui! \nAté logo!"
-  - text: "Foi um prazer te ajudar! \nSempre que precisar, volte aqui! \nAté a próxima!"
+  - text: "Foi um prazer te ajudar! Sempre que tiver alguma dúvida, volte aqui! :)\nAté logo!"
+  - text: "Foi um prazer te ajudar! Sempre que precisar, volte aqui! :D\nAté a próxima!"
   utter_campus_anotado:
   - text: Ok, anotei seu campus, obrigado!
   utter_nao_entendi:
@@ -369,7 +369,7 @@ responses:
   utter_regime_domiciliar_gravidas:
   - text: "A aluna gestante terá direito a 3 meses de atendimento domiciliar a partir do oitavo mês de gestação.\nVocê terá bastante tempo para cuidar e dar muito amor para esse serumaninho aí \U0001F60D\nPara mais informações, basta consultar o artigo 59 § 1° do ROD."
   utter_cumprimentar:
-  - text: Olá! Eu sou o ifes.talk, assistente virtual do Instituto Federal do ES (Ifes). Estou no Ifes desde 2018, então já sei algumas coisas sobre ele, mas não tudo ok?!\nNo momento, tenho mais conhecimento sobre direitos e deveres dos alunos! Estou aqui para ajudar, então vamos lá?!\nVale lembrar também, que podem existir algumas regulamentações internas do campus para complementar alguns assuntos, então você deve procurar o NGP ou o coordenador do seu curso para mais informações.\nQualquer hora que quiser ajuda, só pedir! Eu te conheço de algum lugar, mas não me lembro do seu nome. Qual é mesmo??
+  - text: "Olá! Eu sou o ifes.talk, assistente virtual do Instituto Federal do ES (Ifes). Estou no Ifes desde 2018, então já sei algumas coisas sobre ele, mas não tudo ok?!\nNo momento, tenho mais conhecimento sobre direitos e deveres dos alunos! Estou aqui para ajudar, então vamos lá?!\nVale lembrar também, que podem existir algumas regulamentações internas do campus para complementar alguns assuntos, então você deve procurar o NGP ou o coordenador do seu curso para mais informações.\nQualquer hora que quiser ajuda, só pedir!\nPara começar, me fale seu nome:"
   utter_rod_geral:
   - text: "O Regulamento da Organização Didática dos Cursos Técnicos, mais conhecido como ROD, é um documento do IFES que possui todas as regras e processos didáticos e pedagógicos que devem ser seguidos dentro do IFES.\nPara mais informações, basta consultar o artigo 1° do ROD."
   utter_plano_ensino_contem:
@@ -501,19 +501,19 @@ responses:
   utter_sistema_chamados:
   - text: "Você pode fazer as seguintes solicitações no Sistema de Chamados:\n- Terceira Etapa de Matrícula,\n- Cancelamento de Matrícula,\n- Matrícula Intercampi,\n- Matrícula/Ajuste de dependência para cursos técnicos concomitantes/subsequentes,\n- Matrícula Eletiva,\n- Reabertura de matrícula,\n- Reintegração de matrícula,\n- Trancamento de matrícula,\n- Atestado de escolaridade,\n- Certidão ou Certificado de conclusão,\n- Certificado de conclusão para o CREA,\n- Colação de grau especial (em casos de urgência, conforme o ROD),\n- Colação de grau regular,\n- Diploma e Histórico Final,\n- Disciplinas Intercampi,\n- Histórico final,\n- Histórico parcial,\n- Mudança de campus, turno e/ou curso,\n- Mudança para nova matriz,\n- Nada Consta para docente,\n- Regime Domiciliar,\n- Revisão de resultado final,\n- Solicitação de aproveitamento de conhecimentos e experiências anteriores.\nPara fazer essas e/ou outras solicitações, acesse o site do Sistema de Chamados e faça login com o usuário e senha utilizados no Acadêmico: <https://suporte.ifes.edu.br/ensino/front/helpdesk.public.php>.\nEm caso de dúvidas, acesse o manual no link <https://www.serra.ifes.edu.br/images/stories/Navegar_Perfil/Aluno/Manual_Sistemas_de_Chamados_CRA_-_Usuario.pdf>"
   utter_info_ifes:
-  - text: O Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo (Ifes) é uma instituição pública federal brasileira, vinculada ao Ministério da Educação, que oferece ensino médio integrado a cursos técnicos, cursos técnicos separados concomitantes ou subsequentes ao ensino médio, cursos superiores, pós, especializações e mestrado e é uma das Instituições de Ensino de maior prestígio no Brasil, além de ensino de excelência, tendo as maiores notas do Enem.
+  - text: "O Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo (Ifes) é uma instituição pública federal brasileira, vinculada ao Ministério da Educação, que oferece ensino médio integrado a cursos técnicos, cursos técnicos separados concomitantes ou subsequentes ao ensino médio, cursos superiores, pós, especializações e mestrado e é uma das Instituições de Ensino de maior prestígio no Brasil, além de ensino de excelência, tendo as maiores notas do Enem."
   utter_aluno_ifes:
-  - text: Bom, os direitos e deveres dos alunos dos cursos Técnico, de Graduação e de Pós-Graduação têm algumas diferenças. Por isso, preciso que escolha de acordo com o seu curso:\n\nTécnico\nGraduação\nPós-Graduação
+  - text: "Ok! Bom, os direitos e deveres dos alunos dos cursos Técnico, de Graduação e de Pós-Graduação têm algumas diferenças. Por isso, preciso que escolha de acordo com o seu curso:\n\nTécnico\nGraduação\nPós-Graduação"
   utter_servidor_ifes:
-  - text: "Bom, eu tenho conhecimentos acerca dos direitos e deveres do aluno que constam no ROD de cada tipo de curso: Técnico, Graduação e Pós-Graduação.\nPosso te encaminhar para a página dos processos seletivos também.\nDigite para onde quer ir:\n\nTécnico\nGraduação\nPós Graduação\nProcessos Seletivos"
+  - text: "Ok! Bom, eu tenho conhecimentos acerca dos direitos e deveres do aluno que constam no ROD de cada tipo de curso: Técnico, Graduação e Pós-Graduação.\nPosso te encaminhar para a página dos processos seletivos também.\nDigite para onde quer ir:\n\nTécnico\nGraduação\nPós Graduação\nProcessos Seletivos"
   utter_externo_ifes:
-  - text: "Bom, eu tenho conhecimentos acerca dos direitos e deveres do aluno que constam no ROD de cada tipo de curso: Técnico, Graduação e Pós-Graduação.\nPosso te encaminhar para a página dos processos seletivos também. Digite para onde quer ir:\n\nTécnico\nGraduação\nPós Graduação\nProcessos Seletivos"
+  - text: "Ok! Bom, eu tenho conhecimentos acerca dos direitos e deveres do aluno que constam no ROD de cada tipo de curso: Técnico, Graduação e Pós-Graduação.\nPosso te encaminhar para a página dos processos seletivos também. Digite para onde quer ir:\n\nTécnico\nGraduação\nPós Graduação\nProcessos Seletivos"
   utter_rod_tecnico:
   - text: "O Regulamento da Organização Didática (ROD) dos cursos Técnicos, versão 2020, pode ser encontrado no link: <https://www.ifes.edu.br/images/stories/-publicacoes/documentos-institucionais/regulamento-organizacao-didatica/rod-tecnicos.pd>.\n\nLembrando que podem existir algumas regulamentações internas do campus para complementar alguns assuntos, então você deve procurar o NGP ou o coordenador do seu curso para mais informações.\nVocê pode digitar suas dúvidas de acordo com as opções abaixo. Fique a vontade para escolher xD\n\n1) Transferências/Mudanças\n2) Representante de Turma\n3) Avaliações\n4) Pontuações\n5) Dependência\n6) Revisão de Notas\n7) Dias Letivos\n8) Matrícula\n9) Regime Domiciliar\n10) Plano de Ensino\n11) Calendário Acadêmico\n12) Reuniões Pedagógicas\n13) Segunda Chance Avaliação\n14) Solicitações Online"
   utter_rod_graduacao:
-  - text: "Ainda estou estudando informações acerca do Regulamento da Organização Didática (ROD) dos cursos de Graduação.\nEm breve serei especialista nele e poderei te passar as informações corretas!\nEnquanto isso, você pode acessar o ROD pelo link <https://www.ifes.edu.br/images/stories/files/Pro_reitoria_ensino/atualizacao_rod/PORTARIA_N_1149-2017_Homologa_ROD_Graduacao.pdf>"
+  - text: "Ainda estou estudando o Regulamento da Organização Didática (ROD) dos cursos de Graduação.\nEm breve serei especialista nele e poderei te passar as informações corretas!\nEnquanto isso, você pode acessar o ROD pelo link <https://www.ifes.edu.br/images/stories/files/Pro_reitoria_ensino/atualizacao_rod/PORTARIA_N_1149-2017_Homologa_ROD_Graduacao.pdf>"
   utter_rod_pos_graduacao:
-  - text: Ainda estou estudando informações acerca do Regulamento da Organização Didática (ROD) dos cursos de Pós-Graduação.\nEm breve serei especialista nele e poderei te passar as informações corretas!\nEnquanto isso, você pode acessar o ROD pelo link <https://gedoc.ifes.edu.br/documento/4FD4B8A13BBA4D333CAD7A3AA474BEC9?inline>
+  - text: "Ainda estou estudando o Regulamento da Organização Didática (ROD) dos cursos de Pós-Graduação.\nEm breve serei especialista nele e poderei te passar as informações corretas!\nEnquanto isso, você pode acessar o ROD pelo link <https://gedoc.ifes.edu.br/documento/4FD4B8A13BBA4D333CAD7A3AA474BEC9?inline>"
   utter_processo_seletivo:
   - text: "Você pode acessar a página de Processos Seletivos no link: <https://ifes.edu.br/processosseletivos>."
 

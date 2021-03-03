@@ -308,6 +308,8 @@ nlu:
       - Esquece
       - É nada
       - Nada n
+      - nenhum
+      - Nenhuma
   - intent: me_ajuda
     examples: |
       - me ajuda
