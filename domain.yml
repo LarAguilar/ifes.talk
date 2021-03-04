@@ -230,12 +230,11 @@ responses:
   utter_campus_anotado:
   - text: Ok, anotei seu campus, obrigado!
   utter_nao_entendi:
-  - text: "Eu não consegui te entender direito. Mude a frase, pode me ajudar!"
-  - text: "Eu não te entendi. Mude a frase, talvez pode me ajudar?"
-  - text: "Acho que não te entendi, mas fique calmo! você pode falar de novo usando outras palavras ou mudando a frase?"
-  - text: "Hummmm... Não sei se entendi. Pode escrever de outra forma?"
+  - text: Eu não consegui te entender direito. Mude a frase, pode me ajudar!
+  - text: Eu não te entendi. Mude a frase, talvez pode me ajudar?
+  - text: Acho que não te entendi, mas fique calmo! você pode falar de novo usando outras palavras ou mudando a frase?
   - text: "Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito. \nVocê pode me falar de outro jeito?"
-  - text: "Hummmm... Não sei se entendi. Escreva de outra forma e talvez eu entenda!"
+  - text: Hummmm... Não sei se entendi. Escreva de outra forma e talvez eu entenda!
   utter_fica_feliz:
   - text: "Tenta tirar um cochilo. \nÉ importante e faz bem pra pele ;)"
   - text: Sinto muito =/ Se houver algo em que possa te ajudar, é só falar!! =)
@@ -254,14 +253,12 @@ responses:
   - text: Por nada :)
   - text: De nada
   utter_continuar_conversa:
-  - text: Gostaria de saber algo mais?
+  - text: Posso te ajudar em mais alguma coisa?
   - text: Quer saber mais alguma coisa?
   - text: Posso ajudar em mais alguma coisa?
+  - text: Gostaria de saber algo mais?
   utter_meu_objetivo:
   - text: "Sou um assistente virtual que pode te ajudar a tirar dúvidas sobre o Ifes,\nou só conversar com você mesmo :)"
-  - text: "Eu sou um chatbot básico. Sei falar de coisas pontuais!"
-  utter_informar_nome:
-  - text: "Seu nome é {nome_usuario}, certo?"
   utter_responder_me_ajuda:
   - text: Então, no que gostaria de ajuda?
   - text: Vamos lá, como posso lhe ajudar?
@@ -369,7 +366,7 @@ responses:
   utter_regime_domiciliar_gravidas:
   - text: "A aluna gestante terá direito a 3 meses de atendimento domiciliar a partir do oitavo mês de gestação.\nVocê terá bastante tempo para cuidar e dar muito amor para esse serumaninho aí \U0001F60D\nPara mais informações, basta consultar o artigo 59 § 1° do ROD."
   utter_cumprimentar:
-  - text: "Olá! Eu sou o ifes.talk, assistente virtual do Instituto Federal do ES (Ifes). Estou no Ifes desde 2018, então já sei algumas coisas sobre ele, mas não tudo ok?!\nNo momento, tenho mais conhecimento sobre direitos e deveres dos alunos! Estou aqui para ajudar, então vamos lá?!\nVale lembrar também, que podem existir algumas regulamentações internas do campus para complementar alguns assuntos, então você deve procurar o NGP ou o coordenador do seu curso para mais informações.\nQualquer hora que quiser ajuda, só pedir!\nPara começar, me fale seu nome:"
+  - text: "Olá! Eu sou o ifes.talk, assistente virtual do Instituto Federal do ES (Ifes). Estou no Ifes desde 2018, então já sei algumas coisas sobre ele, mas não tudo ok?!\nNo momento, tenho mais conhecimento sobre direitos e deveres dos alunos! Estou aqui para ajudar, então vamos lá?!\nVocê pode acessar todos os ROD's no link <https://www.ifes.edu.br/documentos-institucionais/5802-regulamento-da-organizacao-didatica>.\nE vale lembrar também, que podem existir algumas regulamentações internas do campus para complementar alguns assuntos, então você deve procurar o NGP ou o coordenador do seu curso para mais informações.\nQualquer hora que quiser ajuda, só pedir!\nPara começar, me fale seu nome:"
   utter_rod_geral:
   - text: "O Regulamento da Organização Didática dos Cursos Técnicos, mais conhecido como ROD, é um documento do IFES que possui todas as regras e processos didáticos e pedagógicos que devem ser seguidos dentro do IFES.\nPara mais informações, basta consultar o artigo 1° do ROD."
   utter_plano_ensino_contem:
@@ -463,11 +460,11 @@ responses:
   utter_educacao_profissional:
   - text: "O Ifes desenvolve Educação Profissional e Tecnológica nos seguintes níveis: \nI - de formação inicial e continuada ou qualificação; \nII - de educação profissional técnica de nível médio; e \nIII - de educação profissional tecnológica de graduação e pós-graduação. \nPara mais informações sobre educação profissional, basta consultar o ROD."
   utter_responsabilidade_social:
-  - text: "O Ifes, convicto de sua responsabilidade social e em respeito às disposições legais vigentes, deverá garantir o atendimento educacional especializado e o fornecimento ou a concessão de materiais especializados e recursos humanos para os discentes público da Educação Especial, atendendo ao princípio da igualdade, como meio da garantia das condições para o acesso, a permanência, a participação e a aprendizagem."
+  - text: O Ifes, convicto de sua responsabilidade social e em respeito às disposições legais vigentes, deverá garantir o atendimento educacional especializado e o fornecimento ou a concessão de materiais especializados e recursos humanos para os discentes público da Educação Especial, atendendo ao princípio da igualdade, como meio da garantia das condições para o acesso, a permanência, a participação e a aprendizagem.
   utter_educacao_especial:
   - text: "O Ifes, convicto de sua responsabilidade social e em respeito às disposições legais vigentes, deverá garantir o atendimento educacional especializado e o fornecimento ou a concessão de materiais especializados e recursos humanos para os discentes público da Educação Especial, atendendo ao princípio da igualdade, como meio da garantia das condições para o acesso, a permanência, a participação e a aprendizagem. \nAlunos que se enquadram na educação especial recebem estratégias diferenciadas e flexibilização de metodologias visando maximizar seu aprendizado!"
   utter_transferencias:
-  - text: "De qual das seguintes opções sobre transferência você gostaria de saber mais?\n\nTransferência de outra instituição para o IFES\nTransferência do IFES para outra instituição\nMudança da modalidade entre presencial e a distância\nMudança de campus\nMudança de turno\nMudança de turma\nMudança de curso\n"
+  - text: "De qual das seguintes opções sobre transferência você gostaria de saber mais?\n\nTransferência de outra instituição para o IFES\nTransferência do IFES para outra instituição\nMudança da modalidade entre presencial e a distância\nMudança de campus\nMudança de turno\nMudança de turma\nMudança de curso\nSolicitações Online"
   utter_representantes:
   - text: "De qual das seguintes opções sobre os representantes você gostaria de saber mais sobre?\n\nSobre representantes de turma\nReuniões dos representantes\n"
   utter_avaliacoes:
@@ -475,25 +472,25 @@ responses:
   utter_pontuacoes:
   - text: "De qual das seguintes opções sobre as pontuações você gostaria de saber mais sobre?\n\nPontuação semestral\nPontuação trimestral\nPontuação bimestral\nPontuações das avaliações\n"
   utter_dependencia:
-  - text: "De qual das seguintes opções sobre a dependência você gostaria de saber mais sobre?\n\nO que é a dependência\nQuando fico de dependência\nMáximo de matérias da dependência\n"
+  - text: "De qual das seguintes opções sobre a dependência você gostaria de saber mais sobre?\n\nO que é a dependência\nQuando fico de dependência\nMáximo de matérias da dependência\nSolicitações Online"
   utter_revisao_notas:
-  - text: "De qual das seguintes opções sobre a revisão de nota você gostaria de saber mais sobre?\n\nRevisão das notas das avaliações\nRevisão da nota final\n"
+  - text: "De qual das seguintes opções sobre a revisão de nota você gostaria de saber mais sobre?\n\nRevisão das notas das avaliações\nRevisão da nota final\nSolicitações Online"
   utter_dias_letivos:
   - text: "De qual das seguintes opções sobre os dias letivos você gostaria de saber mais sobre?\n\nNúmero de dias letivos\nDias e horários que podem ser letivos\n"
   utter_matricula:
-  - text: "De qual das seguintes opções sobre a matrícula você gostaria de saber mais sobre?\n\nO que é a matrícula\nDocumentos necessários para a matrícula\nPrazos para fazer a matrícula\nRenovação da matrícula\nTrancamento de matrícula\nCancelamento da matrícula\nReintegração da matrícula\n"
+  - text: "De qual das seguintes opções sobre a matrícula você gostaria de saber mais sobre?\n\nO que é a matrícula\nDocumentos necessários para a matrícula\nPrazos para fazer a matrícula\nRenovação da matrícula\nTrancamento de matrícula\nCancelamento da matrícula\nReintegração da matrícula\nSolicitações Online"
   utter_trancamento_matricula:
-  - text: "De qual das seguintes opções sobre o trancamento da matrícula você gostaria de saber mais sobre?\n\nSobre o trancamento de matrícula\nQuando não posso trancar a matrícula\n"
+  - text: "De qual das seguintes opções sobre o trancamento da matrícula você gostaria de saber mais sobre?\n\nSobre o trancamento de matrícula\nQuando não posso trancar a matrícula\nSolicitações Online"
   utter_reintegracao_matricula:
   - text: "De qual das seguintes opções sobre a reintegração da matrícula você gostaria de saber mais sobre?\n\nO que é a reintegração da matrícula\nQuando pode fazer a reintegração da matrícula\n"
   utter_regime_domiciliar:
-  - text: "De qual das seguintes opções sobre o regime domiciliar você gostaria de saber mais sobre?\n\nSobre o regime domiciliar\nQuando pode solicitar o regime domiciliar\nQuando o regime domiciliar é efetivado\nPrazo para apresentar o laudo médico para o regime domiciliar\nSobre o regime domiciliar para grávidas\n"
+  - text: "De qual das seguintes opções sobre o regime domiciliar você gostaria de saber mais sobre?\n\nSobre o regime domiciliar\nQuando pode solicitar o regime domiciliar\nQuando o regime domiciliar é efetivado\nPrazo para apresentar o laudo médico para o regime domiciliar\nSobre o regime domiciliar para grávidas\nSolicitações Online"
   utter_plano_ensino:
   - text: "De qual das seguintes opções sobre o plano de ensino você gostaria de saber mais sobre?\n\nConteúdo plano de ensino\nDatas de entrega e de divulgação dos planos de ensino\n"
   utter_calendario_academico:
   - text: "De qual das seguintes opções sobre o calendário acadêmico você gostaria de saber mais sobre?\n\nConteúdo calendário acadêmico\nOnde é possível visualizar o calendário acadêmico\n"
   utter_segunda_chance_avaliacao:
-  - text: "De qual das seguintes opções sobre a segunda chance numa avaliação você gostaria de saber mais sobre?\n\nSegunda chance de avaliação por uma sala inteira\nSegunda chance de avaliação por um discente\n"
+  - text: "De qual das seguintes opções sobre a segunda chance numa avaliação você gostaria de saber mais sobre?\n\nSegunda chance de avaliação por uma sala inteira\nSegunda chance de avaliação por um discente\nSolicitações Online"
   utter_reuniao_pedagogica:
   - text: "De qual das seguintes opções sobre às reuniões pedagógicas você gostaria de saber mais sobre?\n\nO que são as reuniões pedagógicas\nMembros das reuniões pedagógicas\nQuantidade de reuniões pedagógicas\nSobre a reunião pedagógica inicial\nSobre a reunião pedagógica intermediária\nSobre a reunião pedagógica final\nDecisões de reprovação na reunião pedagógica\n"
   utter_rod:
@@ -513,10 +510,9 @@ responses:
   utter_rod_graduacao:
   - text: "Ainda estou estudando o Regulamento da Organização Didática (ROD) dos cursos de Graduação.\nEm breve serei especialista nele e poderei te passar as informações corretas!\nEnquanto isso, você pode acessar o ROD pelo link <https://www.ifes.edu.br/images/stories/files/Pro_reitoria_ensino/atualizacao_rod/PORTARIA_N_1149-2017_Homologa_ROD_Graduacao.pdf>"
   utter_rod_pos_graduacao:
-  - text: "Ainda estou estudando o Regulamento da Organização Didática (ROD) dos cursos de Pós-Graduação.\nEm breve serei especialista nele e poderei te passar as informações corretas!\nEnquanto isso, você pode acessar o ROD pelo link <https://gedoc.ifes.edu.br/documento/4FD4B8A13BBA4D333CAD7A3AA474BEC9?inline>"
+  - text: "Ainda estou estudando o Regulamento da Organização Didática (ROD) dos cursos de Pós-Graduação.\nEm breve serei especialista nele e poderei te passar as informações corretas!\nEnquanto isso, você pode acessar o ROD pelo link <https://gedoc.ifes.edu.br/documento/4FD4B8A13BBA4D333CAD7A3AA474BEC9?inline>\nGostaria de saber sobre algum outro ROD?"
   utter_processo_seletivo:
-  - text: "Você pode acessar a página de Processos Seletivos no link: <https://ifes.edu.br/processosseletivos>."
-
+  - text: 'Você pode acessar a página de Processos Seletivos no link: <https://ifes.edu.br/processosseletivos>.'
 actions:
 - action_campus_link_calendario_academico
 - action_uncheck_all
@@ -541,7 +537,6 @@ actions:
 - utter_de_nada
 - utter_continuar_conversa
 - utter_meu_objetivo
-- utter_informar_nome
 - utter_responder_me_ajuda
 - utter_prazer_usuario
 - utter_minha_religiao
@@ -661,4 +656,6 @@ actions:
 - utter_rod_graduacao
 - utter_rod_pos_graduacao
 - utter_processo_seletivo
+forms: {}
+e2e_actions: []
 version: '2.0'

@@ -1178,6 +1178,7 @@ nlu:
       - eu preciso fazer algo para continuar na escola ano que vem?
   - intent: regime_domiciliar_efetivacao #040
     examples: |
+      - qnd o regime é efetivado
       - Quando é efetivado [regime domiciliar]
       - A partir de que momento o [regime domiciliar] é efetivado?
       - quando o [regime domiciliar] é efetivado
@@ -1190,6 +1191,7 @@ nlu:
       - quando o [regime domiciliar] está valendo
   - intent: regime_domiciliar_condicoes #041
     examples: |
+      - qnd posso solicitar o regime domiciliar
       - quando pode solicitar [regime domiciliar]
       - Quando posso solicitar [regime domiciliar]
       - Qnd posso solicitar [regime domiciliar]?
@@ -1222,6 +1224,10 @@ nlu:
       - o que é o [regime domiciliar]?
       - eu devo ficar doente por um tempo, como faço as aulas?
       - oq eh [regime domiciliar]
+      - Sobre o regime domiciliar
+      - sobre regime domiciliar
+      - sobre o atendimento domiciliar
+      - sobre atendimento domiciliar
   - intent: prazo_regime_domiciliar_laudo_medico #043
     examples: |
       - Prazo para apresentar o laudo medico para o [regime domiciliar]
@@ -1248,6 +1254,9 @@ nlu:
       - se eu ficar grávida, posso tirar um tempo da escola?
       - se estou grávida, posso não ir pra escola
       - sobre o [regime domiciliar] para grávidas
+      - regime domiciliar para gravidas
+      - regime domiciliar para grávidas
+      - sobre o regime domiciliar para gravidas
   - intent: cumprimento #045
     examples: |
       - [ei]
@@ -2143,7 +2152,14 @@ nlu:
       - Gostaria de fazer uma [mudança]
   - intent: representantes #2
     examples: |
+      - Representantes de turma
       - representante de turma
+      - representantes da turma
+      - Representante da turma
+      - repre de turma
+      - repres de turma
+      - repre da turma
+      - repres da turma
       - [Representantes]
       - [repre de turma]
       - [representantes de turma]
@@ -2239,6 +2255,9 @@ nlu:
       - reintegração
   - intent: regime_domiciliar #9
     examples: |
+      - Regime domiciliar
+      - atendimento domiciliar
+      - atendimento em casa
       - [Regime domiciliar]
       - [regime domiciliar]?
       - [atendimento em casa]

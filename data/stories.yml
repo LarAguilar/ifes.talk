@@ -51,11 +51,6 @@ stories:
   - intent: meu_objetivo
   - action: utter_meu_objetivo
   - action: action_listen
-- story: saber nome
-  steps:
-  - intent: saber_nome
-  - action: utter_informar_nome
-  - action: utter_continuar_conversa
 - story: nada
   steps:
   - intent: dizer_nada
@@ -991,12 +986,12 @@ stories:
   steps:
     - intent: rod_graduacao
     - action: utter_rod_graduacao
-    - action: utter_continuar_conversa
+    - action: action_listen
 - story: ROD pos graduacao
   steps:
     - intent: rod_pos_graduacao
     - action: utter_rod_pos_graduacao
-    - action: utter_continuar_conversa
+    - action: action_listen
 - story: Processo Seletivo
   steps:
     - intent: processo_seletivo
