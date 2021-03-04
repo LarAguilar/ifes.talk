@@ -223,7 +223,7 @@ slots:
     type: bool
 responses:
   utter_cumprimentar_usuario_nome:
-  - text:  "Muito prazer, {nome_usuario}! Agora, me fala se você é aluno(a) do ifes, servidor(a) do ifes ou não é do ifes:"
+  - text: 'Prazer, {nome_usuario}! Agora, me fala se você é aluno(a) do ifes, servidor(a) do ifes ou não é do ifes:'
   utter_despedir:
   - text: "Foi um prazer te ajudar! Sempre que tiver alguma dúvida, volte aqui! :)\nAté logo!"
   - text: "Foi um prazer te ajudar! Sempre que precisar, volte aqui! :D\nAté a próxima!"
@@ -233,6 +233,7 @@ responses:
   - text: Eu não consegui te entender direito. Mude a frase, pode me ajudar!
   - text: Eu não te entendi. Mude a frase, talvez pode me ajudar?
   - text: Acho que não te entendi, mas fique calmo! você pode falar de novo usando outras palavras ou mudando a frase?
+  - text: Hummmm... Não sei se entendi. Pode escrever de outra forma?
   - text: "Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito. \nVocê pode me falar de outro jeito?"
   - text: Hummmm... Não sei se entendi. Escreva de outra forma e talvez eu entenda!
   utter_fica_feliz:
@@ -259,6 +260,7 @@ responses:
   - text: Gostaria de saber algo mais?
   utter_meu_objetivo:
   - text: "Sou um assistente virtual que pode te ajudar a tirar dúvidas sobre o Ifes,\nou só conversar com você mesmo :)"
+  - text: Eu sou um chatbot básico. Sei falar de coisas pontuais!
   utter_responder_me_ajuda:
   - text: Então, no que gostaria de ajuda?
   - text: Vamos lá, como posso lhe ajudar?
@@ -482,7 +484,7 @@ responses:
   utter_trancamento_matricula:
   - text: "De qual das seguintes opções sobre o trancamento da matrícula você gostaria de saber mais sobre?\n\nSobre o trancamento de matrícula\nQuando não posso trancar a matrícula\nSolicitações Online"
   utter_reintegracao_matricula:
-  - text: "De qual das seguintes opções sobre a reintegração da matrícula você gostaria de saber mais sobre?\n\nO que é a reintegração da matrícula\nQuando pode fazer a reintegração da matrícula\n"
+  - text: "De qual das seguintes opções sobre a reintegração da matrícula você gostaria de saber mais sobre?\n\nO que é a reintegração da matrícula\nQuando pode fazer a reintegração da matrícula\nSolicitações Online"
   utter_regime_domiciliar:
   - text: "De qual das seguintes opções sobre o regime domiciliar você gostaria de saber mais sobre?\n\nSobre o regime domiciliar\nQuando pode solicitar o regime domiciliar\nQuando o regime domiciliar é efetivado\nPrazo para apresentar o laudo médico para o regime domiciliar\nSobre o regime domiciliar para grávidas\nSolicitações Online"
   utter_plano_ensino:
@@ -498,7 +500,7 @@ responses:
   utter_sistema_chamados:
   - text: "Você pode fazer as seguintes solicitações no Sistema de Chamados:\n- Terceira Etapa de Matrícula,\n- Cancelamento de Matrícula,\n- Matrícula Intercampi,\n- Matrícula/Ajuste de dependência para cursos técnicos concomitantes/subsequentes,\n- Matrícula Eletiva,\n- Reabertura de matrícula,\n- Reintegração de matrícula,\n- Trancamento de matrícula,\n- Atestado de escolaridade,\n- Certidão ou Certificado de conclusão,\n- Certificado de conclusão para o CREA,\n- Colação de grau especial (em casos de urgência, conforme o ROD),\n- Colação de grau regular,\n- Diploma e Histórico Final,\n- Disciplinas Intercampi,\n- Histórico final,\n- Histórico parcial,\n- Mudança de campus, turno e/ou curso,\n- Mudança para nova matriz,\n- Nada Consta para docente,\n- Regime Domiciliar,\n- Revisão de resultado final,\n- Solicitação de aproveitamento de conhecimentos e experiências anteriores.\nPara fazer essas e/ou outras solicitações, acesse o site do Sistema de Chamados e faça login com o usuário e senha utilizados no Acadêmico: <https://suporte.ifes.edu.br/ensino/front/helpdesk.public.php>.\nEm caso de dúvidas, acesse o manual no link <https://www.serra.ifes.edu.br/images/stories/Navegar_Perfil/Aluno/Manual_Sistemas_de_Chamados_CRA_-_Usuario.pdf>"
   utter_info_ifes:
-  - text: "O Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo (Ifes) é uma instituição pública federal brasileira, vinculada ao Ministério da Educação, que oferece ensino médio integrado a cursos técnicos, cursos técnicos separados concomitantes ou subsequentes ao ensino médio, cursos superiores, pós, especializações e mestrado e é uma das Instituições de Ensino de maior prestígio no Brasil, além de ensino de excelência, tendo as maiores notas do Enem."
+  - text: O Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo (Ifes) é uma instituição pública federal brasileira, vinculada ao Ministério da Educação, que oferece ensino médio integrado a cursos técnicos, cursos técnicos separados concomitantes ou subsequentes ao ensino médio, cursos superiores, pós, especializações e mestrado e é uma das Instituições de Ensino de maior prestígio no Brasil, além de ensino de excelência, tendo as maiores notas do Enem.
   utter_aluno_ifes:
   - text: "Ok! Bom, os direitos e deveres dos alunos dos cursos Técnico, de Graduação e de Pós-Graduação têm algumas diferenças. Por isso, preciso que escolha de acordo com o seu curso:\n\nTécnico\nGraduação\nPós-Graduação"
   utter_servidor_ifes:
@@ -508,7 +510,7 @@ responses:
   utter_rod_tecnico:
   - text: "O Regulamento da Organização Didática (ROD) dos cursos Técnicos, versão 2020, pode ser encontrado no link: <https://www.ifes.edu.br/images/stories/-publicacoes/documentos-institucionais/regulamento-organizacao-didatica/rod-tecnicos.pd>.\n\nLembrando que podem existir algumas regulamentações internas do campus para complementar alguns assuntos, então você deve procurar o NGP ou o coordenador do seu curso para mais informações.\nVocê pode digitar suas dúvidas de acordo com as opções abaixo. Fique a vontade para escolher xD\n\n1) Transferências/Mudanças\n2) Representante de Turma\n3) Avaliações\n4) Pontuações\n5) Dependência\n6) Revisão de Notas\n7) Dias Letivos\n8) Matrícula\n9) Regime Domiciliar\n10) Plano de Ensino\n11) Calendário Acadêmico\n12) Reuniões Pedagógicas\n13) Segunda Chance Avaliação\n14) Solicitações Online"
   utter_rod_graduacao:
-  - text: "Ainda estou estudando o Regulamento da Organização Didática (ROD) dos cursos de Graduação.\nEm breve serei especialista nele e poderei te passar as informações corretas!\nEnquanto isso, você pode acessar o ROD pelo link <https://www.ifes.edu.br/images/stories/files/Pro_reitoria_ensino/atualizacao_rod/PORTARIA_N_1149-2017_Homologa_ROD_Graduacao.pdf>"
+  - text: "Ainda estou estudando o Regulamento da Organização Didática (ROD) dos cursos de Graduação.\nEm breve serei especialista nele e poderei te passar as informações corretas!\nEnquanto isso, você pode acessar o ROD pelo link <https://www.ifes.edu.br/images/stories/files/Pro_reitoria_ensino/atualizacao_rod/PORTARIA_N_1149-2017_Homologa_ROD_Graduacao.pdf>\nGostaria de saber sobre algum outro ROD?"
   utter_rod_pos_graduacao:
   - text: "Ainda estou estudando o Regulamento da Organização Didática (ROD) dos cursos de Pós-Graduação.\nEm breve serei especialista nele e poderei te passar as informações corretas!\nEnquanto isso, você pode acessar o ROD pelo link <https://gedoc.ifes.edu.br/documento/4FD4B8A13BBA4D333CAD7A3AA474BEC9?inline>\nGostaria de saber sobre algum outro ROD?"
   utter_processo_seletivo:
