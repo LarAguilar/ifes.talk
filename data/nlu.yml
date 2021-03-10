@@ -2137,6 +2137,7 @@ nlu:
 ### Assuntos gerais
   - intent: transferencias #1
     examples: |
+      - 1
       - Transferências
       - quero saber como fazer uma [transferência]
       - como faço uma [transferência]?
@@ -2152,6 +2153,7 @@ nlu:
       - Gostaria de fazer uma [mudança]
   - intent: representantes #2
     examples: |
+      - 2
       - Representantes de turma
       - representante de turma
       - representantes da turma
@@ -2170,6 +2172,7 @@ nlu:
       - os [representantes da turma]
   - intent: avaliacoes #3
     examples: |
+      - 3
       - [avaliacoes]
       - [Avaliações]
       - as [avaliações]
@@ -2180,6 +2183,7 @@ nlu:
       - sobre as [provas]
   - intent: pontuacoes #4
     examples: |
+      - 4
       - [Pontuações]
       - Quero saber o total de [pontos]
       - [Pontos] total
@@ -2190,6 +2194,7 @@ nlu:
       - Quantos [pontos] tem?
   - intent: dependencia #5
     examples: |
+      - 5
       - [Dependência]
       - [dp]
       - [dep]
@@ -2197,6 +2202,7 @@ nlu:
       - quero conversar sobre a [dependência]
   - intent: revisao_notas #6
     examples: |
+      - 6
       - revisao de notas
       - revisao notas
       - Revisão de notas
@@ -2215,6 +2221,7 @@ nlu:
       - gostaria de uma revisão da [nota] que obtive
   - intent: dias_letivos #7
     examples: |
+      - 7
       - Dias letivos
       - dia letivo
       - fala sobre os dias letivos
@@ -2224,6 +2231,7 @@ nlu:
       - dias em que tem aula
   - intent: matricula #8
     examples: |
+      - 8
       - Matrícula
       - matricula
       - me dá informações sobre a matricula
@@ -2255,6 +2263,7 @@ nlu:
       - reintegração
   - intent: regime_domiciliar #9
     examples: |
+      - 9
       - Regime domiciliar
       - atendimento domiciliar
       - atendimento em casa
@@ -2268,6 +2277,7 @@ nlu:
       - [regime domiciliar] do Ifes
   - intent: plano_ensino #10
     examples: |
+      - 10
       - Plano de ensino
       - Planos de ensino
       - Sobre os planos de ensino
@@ -2280,6 +2290,7 @@ nlu:
       - gostaria de informações acerca dos planos de ensino
   - intent: calendario_academico #11
     examples: |
+      - 11
       - calendario academico
       - Calendário Acadêmico
       - sobre o calendário academico
@@ -2292,6 +2303,7 @@ nlu:
       - calendario de aulas
   - intent: segunda_chance_avaliacao #12
     examples: |
+      - 12
       - Segunda chance [avaliação]
       - segunda chance de [avaliacao]
       - refazer [avalicao]
@@ -2307,6 +2319,7 @@ nlu:
       - posso pedir uma [prova] nova?
   - intent: reuniao_pedagogica #13
     examples: |
+      - 13
       - Reuniões Pedagógicas
       - reuniao pedagogica
       - Sobre reunioes pedagogicas
@@ -2319,6 +2332,7 @@ nlu:
       - reunião escolar
   - intent: rod #14
     examples: |
+      - 14
       - [ROD]
       - [rod]
       - [rod2020]
@@ -2333,6 +2347,7 @@ nlu:
 # Sistema de chamados
   - intent: SC_geral
     examples: |
+      - 15
       - Sistema de chamados
       - Como fazer solicitação no sistema de chamados
       - quero fazer uma solicitação no sistema de chamados
