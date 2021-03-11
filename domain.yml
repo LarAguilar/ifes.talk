@@ -2,6 +2,11 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- rod_tecnico
+- cumprimento
+- transferencias
+- aluno_ifes
+- nlu_fallback
 - informar_nome
 - informar_campus
 - despedir
@@ -59,7 +64,6 @@ intents:
 - regime_domiciliar_sobre
 - prazo_regime_domiciliar_laudo_medico
 - regime_domiciliar_gravidas
-- cumprimento
 - rod_geral
 - plano_ensino_contem
 - plano_ensino_datas
@@ -111,7 +115,6 @@ intents:
 - educacao_profissional
 - responsabilidade_social
 - educacao_especial
-- transferencias
 - representantes
 - avaliacoes
 - pontuacoes
@@ -135,7 +138,6 @@ intents:
 - saber_as_horas
 - esta_feliz
 - esta_triste
-- nlu_fallback
 - SC_geral
 - SC_matricula
 - SC_terceira_etapa_matricula
@@ -163,11 +165,8 @@ intents:
 - SC_revisao_resultado_final
 - SC_aproveitamento
 - info_ifes
-- concomitante_e_eja
-- aluno_ifes
 - servidor_ifes
 - externo_ifes
-- rod_tecnico
 - rod_graduacao
 - rod_pos_graduacao
 - processo_seletivo
@@ -175,8 +174,6 @@ entities:
 - campus
 - nome_usuario
 slots:
-  nome_usuario:
-    type: text
   campus:
     type: categorical
     influence_conversation: false
@@ -203,27 +200,42 @@ slots:
     - vila velha
     - vitória
     - __other__
-  uncheck_all:
-    type: bool
-  check_modalidade:
-    type: bool
-  check_mudar_curso:
-    type: bool
   check_aproveitamento_disciplinas:
     type: bool
-  check_trancamento_matricula_sobre:
-    type: bool
-  check_chamada_suplentes:
-    type: bool
+    influence_conversation: true
   check_calendario_academico_localizacao:
     type: bool
+    influence_conversation: true
+  check_chamada_suplentes:
+    type: bool
+    influence_conversation: true
+  check_modalidade:
+    type: bool
+    influence_conversation: true
+  check_mudar_curso:
+    type: bool
+    influence_conversation: true
   check_reintegracao_matricula_condicoes:
     type: bool
+    influence_conversation: true
   check_reuniao_pedagogica_quantidade:
     type: bool
+    influence_conversation: true
+  check_trancamento_matricula_sobre:
+    type: bool
+    influence_conversation: true
+  primeiro_nome:
+    type: text
+    influence_conversation: true
+  requested_slot:
+    type: text
+    influence_conversation: false
+  uncheck_all:
+    type: bool
+    influence_conversation: true
 responses:
   utter_cumprimentar_usuario_nome:
-  - text: 'Prazer, {nome_usuario}! Agora, me fala se você é aluno(a) do ifes, servidor(a) do ifes ou não é do ifes:'
+  - text: 'Prazer, {primeiro_nome}! Agora, me fala se você é aluno(a) do ifes, servidor(a) do ifes ou não é do ifes:'
   utter_despedir:
   - text: "Foi um prazer te ajudar! Sempre que tiver alguma dúvida, volte aqui! :)\nAté logo!"
   - text: "Foi um prazer te ajudar! Sempre que precisar, volte aqui! :D\nAté a próxima!"
@@ -233,7 +245,7 @@ responses:
   - text: Eu não consegui te entender direito. Mude a frase, pode me ajudar!
   - text: Eu não te entendi. Mude a frase, talvez pode me ajudar?
   - text: Acho que não te entendi, mas fique calmo! você pode falar de novo usando outras palavras ou mudando a frase?
-  - text: Hummmm... Não sei se entendi. Pode escrever de outra forma?
+  - text: Humm... Não sei se entendi. Pode escrever de outra forma?
   - text: "Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito. \nVocê pode me falar de outro jeito?"
   - text: Hummmm... Não sei se entendi. Escreva de outra forma e talvez eu entenda!
   utter_fica_feliz:
@@ -265,8 +277,8 @@ responses:
   - text: Então, no que gostaria de ajuda?
   - text: Vamos lá, como posso lhe ajudar?
   utter_prazer_usuario:
-  - text: Sim, você tem nome bonito {nome_usuario}, prazer!
-  - text: É um prazer {nome_usuario}! Como já falei, sou ifes.talk :)
+  - text: Sim, você tem nome bonito {primeiro_nome}, prazer!
+  - text: É um prazer {primeiro_nome}! Como já falei, sou ifes.talk :)
   utter_minha_religiao:
   - text: Eu acredito que existe um Deus que funciona à base de luz, como um computador quântico, só que mais avançado!
   - text: Eu infelizmente não sei acreditar, só sei o que sei, e nada mais.
@@ -465,38 +477,38 @@ responses:
   - text: O Ifes, convicto de sua responsabilidade social e em respeito às disposições legais vigentes, deverá garantir o atendimento educacional especializado e o fornecimento ou a concessão de materiais especializados e recursos humanos para os discentes público da Educação Especial, atendendo ao princípio da igualdade, como meio da garantia das condições para o acesso, a permanência, a participação e a aprendizagem.
   utter_educacao_especial:
   - text: "O Ifes, convicto de sua responsabilidade social e em respeito às disposições legais vigentes, deverá garantir o atendimento educacional especializado e o fornecimento ou a concessão de materiais especializados e recursos humanos para os discentes público da Educação Especial, atendendo ao princípio da igualdade, como meio da garantia das condições para o acesso, a permanência, a participação e a aprendizagem. \nAlunos que se enquadram na educação especial recebem estratégias diferenciadas e flexibilização de metodologias visando maximizar seu aprendizado!"
-  utter_transferencias:
-  - text: "De qual das seguintes opções sobre transferência você gostaria de saber mais?\n\nTransferência de outra instituição para o IFES\nTransferência do IFES para outra instituição\nMudança da modalidade entre presencial e a distância\nMudança de campus\nMudança de turno\nMudança de turma\nMudança de curso\nSolicitações Online"
+  utter_transferencias: 
+  - text: "De qual das seguintes opções sobre transferência você gostaria de saber mais?\n\n- Transferência para o IFES\n- Transferência do IFES para outra instituição\n- Mudança da modalidade entre presencial e a distância\n- Mudança de campus\n- Mudança de turno\n- Mudança de turma\n- Mudança de curso\n- Solicitações Online"
   utter_representantes:
-  - text: "De qual das seguintes opções sobre os representantes você gostaria de saber mais sobre?\n\nSobre representantes de turma\nReuniões dos representantes\n"
+  - text: "De qual das seguintes opções sobre os representantes você gostaria de saber mais sobre?\n\n- Sobre representantes de turma\n- Reuniões dos representantes\n"
   utter_avaliacoes:
-  - text: "De qual das seguintes opções sobre as avaliações você gostaria de saber mais sobre?\n\nConteúdos avaliações\nComo avaliações funcionam para pessoas com necessidades específicas\nPrazos das entregas de avaliações\nQuantidade de avaliações\nPontuações das avaliações\n"
+  - text: "De qual das seguintes opções sobre as avaliações você gostaria de saber mais sobre?\n\n- Conteúdos avaliações\n- Como avaliações funcionam para pessoas com necessidades específicas\n- Prazos das entregas de avaliações\n- Quantidade de avaliações\n- Pontuações das avaliações\n"
   utter_pontuacoes:
-  - text: "De qual das seguintes opções sobre as pontuações você gostaria de saber mais sobre?\n\nPontuação semestral\nPontuação trimestral\nPontuação bimestral\nPontuações das avaliações\n"
+  - text: "De qual das seguintes opções sobre as pontuações você gostaria de saber mais sobre?\n\n- Pontuação semestral\n- Pontuação trimestral\n- Pontuação bimestral\n- Pontuações das avaliações\n"
   utter_dependencia:
-  - text: "De qual das seguintes opções sobre a dependência você gostaria de saber mais sobre?\n\nO que é a dependência\nQuando fico de dependência\nMáximo de matérias da dependência\nSolicitações Online"
+  - text: "De qual das seguintes opções sobre a dependência você gostaria de saber mais sobre?\n\n- O que é a dependência\n- Quando fico de dependência\n- Máximo de matérias da dependência\n- Solicitações Online"
   utter_revisao_notas:
-  - text: "De qual das seguintes opções sobre a revisão de nota você gostaria de saber mais sobre?\n\nRevisão das notas das avaliações\nRevisão da nota final\nSolicitações Online"
+  - text: "De qual das seguintes opções sobre a revisão de nota você gostaria de saber mais sobre?\n\n- Revisão das notas das avaliações\n- Revisão da nota final\n- Solicitações Online"
   utter_dias_letivos:
-  - text: "De qual das seguintes opções sobre os dias letivos você gostaria de saber mais sobre?\n\nNúmero de dias letivos\nDias e horários que podem ser letivos\n"
+  - text: "De qual das seguintes opções sobre os dias letivos você gostaria de saber mais sobre?\n\n- Número de dias letivos\n- Dias e horários que podem ser letivos\n"
   utter_matricula:
-  - text: "De qual das seguintes opções sobre a matrícula você gostaria de saber mais sobre?\n\nO que é a matrícula\nDocumentos necessários para a matrícula\nPrazos para fazer a matrícula\nRenovação da matrícula\nTrancamento de matrícula\nCancelamento da matrícula\nReintegração da matrícula\nSolicitações Online"
+  - text: "De qual das seguintes opções sobre a matrícula você gostaria de saber mais sobre?\n\n- O que é a matrícula\n- Documentos necessários para a matrícula\n- Prazos para fazer a matrícula\n- Renovação da matrícula\n- Trancamento de matrícula\n- Cancelamento da matrícula\n- Reintegração da matrícula\n- Solicitações Online"
   utter_trancamento_matricula:
-  - text: "De qual das seguintes opções sobre o trancamento da matrícula você gostaria de saber mais sobre?\n\nSobre o trancamento de matrícula\nQuando não posso trancar a matrícula\nSolicitações Online"
+  - text: "De qual das seguintes opções sobre o trancamento da matrícula você gostaria de saber mais sobre?\n\n- Sobre o trancamento de matrícula\n- Quando não posso trancar a matrícula\n- Solicitações Online"
   utter_reintegracao_matricula:
-  - text: "De qual das seguintes opções sobre a reintegração da matrícula você gostaria de saber mais sobre?\n\nO que é a reintegração da matrícula\nQuando pode fazer a reintegração da matrícula\nSolicitações Online"
+  - text: "De qual das seguintes opções sobre a reintegração da matrícula você gostaria de saber mais sobre?\n\n- O que é a reintegração da matrícula\n- Quando pode fazer a reintegração da matrícula\n- Solicitações Online"
   utter_regime_domiciliar:
-  - text: "De qual das seguintes opções sobre o regime domiciliar você gostaria de saber mais sobre?\n\nSobre o regime domiciliar\nQuando pode solicitar o regime domiciliar\nQuando o regime domiciliar é efetivado\nPrazo para apresentar o laudo médico para o regime domiciliar\nSobre o regime domiciliar para grávidas\nSolicitações Online"
+  - text: "De qual das seguintes opções sobre o regime domiciliar você gostaria de saber mais sobre?\n\n- Sobre o regime domiciliar\n- Quando pode solicitar o regime domiciliar\n- Quando o regime domiciliar é efetivado\n- Prazo para apresentar o laudo médico para o regime domiciliar\n- Sobre o regime domiciliar para grávidas\n- Solicitações Online"
   utter_plano_ensino:
-  - text: "De qual das seguintes opções sobre o plano de ensino você gostaria de saber mais sobre?\n\nConteúdo plano de ensino\nDatas de entrega e de divulgação dos planos de ensino\n"
+  - text: "De qual das seguintes opções sobre o plano de ensino você gostaria de saber mais sobre?\n\n- Conteúdo plano de ensino\n- Datas de entrega e de divulgação dos planos de ensino\n"
   utter_calendario_academico:
-  - text: "De qual das seguintes opções sobre o calendário acadêmico você gostaria de saber mais sobre?\n\nConteúdo calendário acadêmico\nOnde é possível visualizar o calendário acadêmico\n"
+  - text: "De qual das seguintes opções sobre o calendário acadêmico você gostaria de saber mais sobre?\n\n- Conteúdo calendário acadêmico\n- Onde é possível visualizar o calendário acadêmico\n"
   utter_segunda_chance_avaliacao:
-  - text: "De qual das seguintes opções sobre a segunda chance numa avaliação você gostaria de saber mais sobre?\n\nSegunda chance de avaliação por uma sala inteira\nSegunda chance de avaliação por um discente\nSolicitações Online"
+  - text: "De qual das seguintes opções sobre a segunda chance numa avaliação você gostaria de saber mais sobre?\n\n- Segunda chance de avaliação por uma sala inteira\n- Segunda chance de avaliação por um discente\n- Solicitações Online"
   utter_reuniao_pedagogica:
-  - text: "De qual das seguintes opções sobre às reuniões pedagógicas você gostaria de saber mais sobre?\n\nO que são as reuniões pedagógicas\nMembros das reuniões pedagógicas\nQuantidade de reuniões pedagógicas\nSobre a reunião pedagógica inicial\nSobre a reunião pedagógica intermediária\nSobre a reunião pedagógica final\nDecisões de reprovação na reunião pedagógica\n"
+  - text: "De qual das seguintes opções sobre às reuniões pedagógicas você gostaria de saber mais sobre?\n\n- O que são as reuniões pedagógicas\n- Membros das reuniões pedagógicas\n- Quantidade de reuniões pedagógicas\n- Sobre a reunião pedagógica inicial\n- Sobre a reunião pedagógica intermediária\n- Sobre a reunião pedagógica final\n- Decisões de reprovação na reunião pedagógica\n"
   utter_rod:
-  - text: "De qual das seguintes opções sobre o ROD você gostaria de saber mais sobre?\n\nO que é o ROD\nValidade do ROD atual\nO capítulo do ROD que fala sobre o ROD\nSumário do ROD atual\n"
+  - text: "De qual das seguintes opções sobre o ROD você gostaria de saber mais sobre?\n\n- O que é o ROD\n- Validade do ROD atual\n- O capítulo do ROD que fala sobre o ROD\n- Sumário do ROD atual\n"
   utter_sistema_chamados:
   - text: "Você pode fazer as seguintes solicitações no Sistema de Chamados:\n- Terceira Etapa de Matrícula,\n- Cancelamento de Matrícula,\n- Matrícula Intercampi,\n- Matrícula/Ajuste de dependência para cursos técnicos concomitantes/subsequentes,\n- Matrícula Eletiva,\n- Reabertura de matrícula,\n- Reintegração de matrícula,\n- Trancamento de matrícula,\n- Atestado de escolaridade,\n- Certidão ou Certificado de conclusão,\n- Certificado de conclusão para o CREA,\n- Colação de grau especial (em casos de urgência, conforme o ROD),\n- Colação de grau regular,\n- Diploma e Histórico Final,\n- Disciplinas Intercampi,\n- Histórico final,\n- Histórico parcial,\n- Mudança de campus, turno e/ou curso,\n- Mudança para nova matriz,\n- Nada Consta para docente,\n- Regime Domiciliar,\n- Revisão de resultado final,\n- Solicitação de aproveitamento de conhecimentos e experiências anteriores.\nPara fazer essas e/ou outras solicitações, acesse o site do Sistema de Chamados e faça login com o usuário e senha utilizados no Acadêmico: <https://suporte.ifes.edu.br/ensino/front/helpdesk.public.php>.\nEm caso de dúvidas, acesse o manual no link <https://www.serra.ifes.edu.br/images/stories/Navegar_Perfil/Aluno/Manual_Sistemas_de_Chamados_CRA_-_Usuario.pdf>"
   utter_info_ifes:
@@ -517,147 +529,149 @@ responses:
   - text: 'Você pode acessar a página de Processos Seletivos no link: <https://ifes.edu.br/processosseletivos>.'
 actions:
 - action_campus_link_calendario_academico
-- action_uncheck_all
-- action_uncheck_uncheck_all
+- action_check_aproveitamento_disciplinas
+- action_check_calendario_academico_localizacao
+- action_check_chamada_suplentes
 - action_check_modalidade
 - action_check_mudar_curso
-- action_check_aproveitamento_disciplinas
-- action_check_trancamento_matricula_sobre
-- action_check_chamada_suplentes
-- action_check_calendario_academico_localizacao
 - action_check_reintegracao_matricula_condicoes
 - action_check_reuniao_pedagogica_quantidade
-- utter_cumprimentar_usuario_nome
-- utter_cumprimentar
-- utter_despedir
+- action_check_trancamento_matricula_sobre
+- action_uncheck_all
+- action_uncheck_uncheck_all
+- utter_aluno_ifes
+- utter_avaliacoes
+- utter_calendario_academico
+- utter_calendario_academico_conteudo
 - utter_campus_anotado
-- utter_nao_entendi
-- utter_fica_feliz
-- utter_usuario_esta_feliz
-- utter_ok
+- utter_cancelamento_matricula
+- utter_coeficiente_rendimento
 - utter_como_estou
-- utter_de_nada
-- utter_continuar_conversa
-- utter_meu_objetivo
-- utter_responder_me_ajuda
-- utter_prazer_usuario
-- utter_minha_religiao
-- utter_playlist
-- utter_recebi_elogios
-- utter_meu_genero
-- utter_piadas
-- utter_nao_sei
-- utter_minha_license
-- utter_transferencia_de_outra_escola
-- utter_transferencia_para_outra_escola
-- utter_representantes_reunioes
-- utter_representantes_da_turma
-- utter_mudanca_campus
-- utter_mudanca_turno
-- utter_mudanca_turma
-- utter_prazos_entregas_avaliacoes
+- utter_condicoes_aprovacao
 - utter_conteudos_avaliacoes
 - utter_conteudos_avaliacoes_necessidadades_especificas
-- utter_quantidade_avaliacoes
-- utter_pontuacao_avaliacoes
-- utter_recuperacao
-- utter_pontuacao_semestral
-- utter_periodo_maximo_conclusao
-- utter_ficar_retido
-- utter_promocao_parcial
+- utter_continuar_conversa
+- utter_corpo_discente
+- utter_cumprimentar
+- utter_cumprimentar_usuario_nome
+- utter_de_nada
+- utter_dependencia
 - utter_dependencia_condicoes
-- utter_maximo_materias_dependencia
-- utter_revisao_notas_parciais
-- utter_revisao_notas_finais
-- utter_frequencia_minima
-- utter_condicoes_aprovacao
 - utter_dependencia_geral
-- utter_numero_dias_letivos
-- utter_disciplinas_optativas
-- utter_quando_proibido_trancamento_matricula
-- utter_cancelamento_matricula
 - utter_desistente
+- utter_despedir
+- utter_dias_letivos
+- utter_disciplinas_optativas
 - utter_documentos_matricula
-- utter_quando_sou_aluno
-- utter_prazo_matricula
-- utter_renovacao_matricula
-- utter_regime_domiciliar_efetivacao
-- utter_regime_domiciliar_condicoes
-- utter_regime_domiciliar_sobre
-- utter_prazo_regime_domiciliar_laudo_medico
-- utter_regime_domiciliar_gravidas
-- utter_rod_geral
+- utter_educacao_especial
+- utter_educacao_nacional_constituicao_form_integral
+- utter_educacao_profissional
+- utter_estagio
+- utter_estudantes_distancia_avaliacao_rendimento
+- utter_fica_feliz
+- utter_ficar_retido
+- utter_frequencia_minima
+- utter_gestao_educacional
+- utter_ifes_condicoes
+- utter_info_ifes
+- utter_matricula
+- utter_matricula_sobre
+- utter_maximo_materias_dependencia
+- utter_meu_genero
+- utter_meu_objetivo
+- utter_minha_license
+- utter_minha_religiao
+- utter_monitoria
+- utter_mudanca_campus
+- utter_mudanca_turma
+- utter_mudanca_turno
+- utter_nao_entendi
+- utter_nao_sei
+- utter_numero_dias_letivos
+- utter_oferta_cursos
+- utter_ok
+- utter_periodo_maximo_conclusao
+- utter_piadas
+- utter_plano_ensino
 - utter_plano_ensino_contem
 - utter_plano_ensino_datas
-- utter_coeficiente_rendimento
-- utter_oferta_cursos
-- utter_tempo_oferta_aulas
-- utter_calendario_academico_conteudo
-- utter_ifes_condicoes
-- utter_preenchimento_vagas_discentes_ifes
-- utter_matricula_sobre
-- utter_reintegracao_matricula_sobre
-- utter_segunda_chance_avaliacao_turma
-- utter_segunda_chance_avaliacao_discente
-- utter_estudantes_distancia_avaliacao_rendimento
-- utter_pontuacao_trimestral
+- utter_playlist
+- utter_pontuacao_avaliacoes
 - utter_pontuacao_bimestral
+- utter_pontuacao_semestral
+- utter_pontuacao_trimestral
+- utter_pontuacoes
+- utter_prazer_usuario
+- utter_prazo_matricula
+- utter_prazo_regime_domiciliar_laudo_medico
+- utter_prazos_entregas_avaliacoes
+- utter_preenchimento_vagas_discentes_ifes
+- utter_processo_seletivo
+- utter_processos_pedagogicos_e_didaticos
+- utter_promocao_parcial
+- utter_quando_proibido_trancamento_matricula
+- utter_quando_sou_aluno
+- utter_quantidade_avaliacoes
+- utter_recebi_elogios
+- utter_recuperacao
+- utter_regime_domiciliar
+- utter_regime_domiciliar_condicoes
+- utter_regime_domiciliar_efetivacao
+- utter_regime_domiciliar_gravidas
+- utter_regime_domiciliar_sobre
 - utter_registro_informacoes_no_academico
-- utter_reuniao_pedagogica_sobre
+- utter_reintegracao_matricula
+- utter_reintegracao_matricula_sobre
+- utter_renovacao_matricula
+- utter_representantes
+- utter_representantes_da_turma
+- utter_representantes_reunioes
+- utter_responder_me_ajuda
+- utter_responsabilidade_social
+- utter_reuniao_pedagogica
+- utter_reuniao_pedagogica_decisao_final
+- utter_reuniao_pedagogica_final
 - utter_reuniao_pedagogica_inicial
 - utter_reuniao_pedagogica_intermediaria
-- utter_reuniao_pedagogica_final
-- utter_reuniao_pedagogica_decisao_final
 - utter_reuniao_pedagogica_membros
-- utter_monitoria
-- utter_estagio
-- utter_corpo_discente
-- utter_rod_2020_validade
-- utter_tit_cap_rod
-- utter_tit_cap_cursos_curriculos_planos_ensino
-- utter_tit_cap_periodo_letivo
-- utter_tit_cap_admissao_matricula
-- utter_tit_cap_atendimento_domiciliar
-- utter_tit_cap_transferencias_adaptacoes
-- utter_tit_cap_modalidades
-- utter_tit_cap_reunioes_pedagogicas
-- utter_tit_outras_atividades_ensino
-- utter_tit_cap_estagio_curricular
-- utter_tit_organizacoes_orientacoes_discentes
-- utter_tit_certificados_diplomas
-- utter_tit_intercambio_academico
-- utter_tit_disposicoes_gerais_transitorias
-- utter_sumario_rod
-- utter_processos_pedagogicos_e_didaticos
-- utter_educacao_nacional_constituicao_form_integral
-- utter_gestao_educacional
-- utter_educacao_profissional
-- utter_responsabilidade_social
-- utter_educacao_especial
-- utter_transferencias
-- utter_representantes
-- utter_avaliacoes
-- utter_pontuacoes
-- utter_dependencia
+- utter_reuniao_pedagogica_sobre
 - utter_revisao_notas
-- utter_dias_letivos
-- utter_matricula
-- utter_trancamento_matricula
-- utter_reintegracao_matricula
-- utter_regime_domiciliar
-- utter_plano_ensino
-- utter_calendario_academico
-- utter_segunda_chance_avaliacao
-- utter_reuniao_pedagogica
+- utter_revisao_notas_finais
+- utter_revisao_notas_parciais
 - utter_rod
-- utter_sistema_chamados
-- utter_info_ifes
-- utter_aluno_ifes
-- utter_servidor_ifes
-- utter_rod_tecnico
+- utter_rod_2020_validade
+- utter_rod_geral
 - utter_rod_graduacao
 - utter_rod_pos_graduacao
-- utter_processo_seletivo
-forms: {}
-e2e_actions: []
+- utter_rod_tecnico
+- utter_segunda_chance_avaliacao
+- utter_segunda_chance_avaliacao_discente
+- utter_segunda_chance_avaliacao_turma
+- utter_servidor_ifes
+- utter_sistema_chamados
+- utter_sumario_rod
+- utter_tempo_oferta_aulas
+- utter_tit_cap_admissao_matricula
+- utter_tit_cap_atendimento_domiciliar
+- utter_tit_cap_cursos_curriculos_planos_ensino
+- utter_tit_cap_estagio_curricular
+- utter_tit_cap_modalidades
+- utter_tit_cap_periodo_letivo
+- utter_tit_cap_reunioes_pedagogicas
+- utter_tit_cap_rod
+- utter_tit_cap_transferencias_adaptacoes
+- utter_tit_certificados_diplomas
+- utter_tit_disposicoes_gerais_transitorias
+- utter_tit_intercambio_academico
+- utter_tit_organizacoes_orientacoes_discentes
+- utter_tit_outras_atividades_ensino
+- utter_trancamento_matricula
+- utter_transferencia_de_outra_escola
+- utter_transferencia_para_outra_escola
+- utter_transferencias
+- utter_usuario_esta_feliz
+forms:
+  nome_form:
+    primeiro_nome:
+    - type: from_text
 version: '2.0'

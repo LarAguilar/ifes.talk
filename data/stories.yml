@@ -103,11 +103,6 @@ stories:
   - intent: minha_license
   - action: utter_minha_license
   - action: action_listen
-- story: Pedir para o usuario repetir o nome porque não entende
-  steps:
-    - intent: informar_nome
-    - action: utter_nao_entendi
-    - intent: informar_nome
 - story: sobre o Ifes
   steps:
   - intent: info_ifes
@@ -426,16 +421,6 @@ stories:
     - intent: regime_domiciliar_gravidas
     - action: utter_regime_domiciliar_gravidas
     - action: utter_continuar_conversa
-- story: Cumprimentação #045
-  steps:
-  - intent: cumprimento
-  - action: utter_cumprimentar
-  - intent: informar_nome
-    entities:
-    - nome_usuario: "Paulo"
-  - slot_was_set:
-    - nome_usuario: True
-  - action: utter_cumprimentar_usuario_nome
 - story: O que é o ROD #046
   steps:
     - intent: rod_geral
@@ -1002,3 +987,65 @@ stories:
     - action: utter_continuar_conversa
     - intent: negar
     - action: utter_despedir
+- story: Pedir para usuário repetir de outro jeito quando não entende
+  steps:
+  - intent: nlu_fallback
+  - action: utter_nao_entendi
+
+- story: interactive_story_cumprimento
+  steps:
+  - intent: cumprimento
+  - action: utter_cumprimentar
+  - action: nome_form
+  - active_loop: nome_form
+  - slot_was_set:
+    - requested_slot: primeiro_nome
+  - slot_was_set:
+    - primeiro_nome: Lara
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_cumprimentar_usuario_nome
+
+- story: interactive_story_1
+  steps:
+  - intent: cumprimento
+  - action: utter_cumprimentar
+  - action: nome_form
+  - active_loop: nome_form
+  - slot_was_set:
+    - requested_slot: primeiro_nome
+  - slot_was_set:
+    - primeiro_nome: Joao
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_cumprimentar_usuario_nome
+
+- story: interactive_story_aluno
+  steps:
+  - intent: aluno_ifes
+  - action: utter_aluno_ifes
+  - intent: rod_tecnico
+  - action: utter_rod_tecnico
+
+- story: interactive_story_1
+  steps:
+  - intent: cumprimento
+  - action: utter_cumprimentar
+  - action: nome_form
+  - active_loop: nome_form
+  - slot_was_set:
+    - requested_slot: primeiro_nome
+  - slot_was_set:
+    - primeiro_nome: Jurema
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_cumprimentar_usuario_nome
+  - intent: aluno_ifes
+  - action: utter_aluno_ifes
+  - intent: rod_tecnico
+  - action: utter_rod_tecnico
+  - intent: transferencias
+  - action: utter_transferencias
