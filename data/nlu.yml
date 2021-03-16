@@ -1,19 +1,5 @@
 version: "2.0"
 nlu:
-  - intent: saber_nome
-    examples: |
-      - Qual meu nome?
-      - Qual é meu nome?
-      - Qual meu nome no momento?
-      - Me fale meu nome
-      - Fala qual é meu nome
-      - Fala aí meu nome
-      - Qual meu nome mesmo?
-      - Conte-me meu nomes
-      - Conta meu nome aí
-      - Qual era meu nome?
-      - Me lembra meu nome ent
-      - qual meu nome?
 - intent: informar_nome
   examples: |
     - [Diego](nome_usuario)
@@ -499,13 +485,19 @@ nlu:
   examples: |
     - [Transferência] do ifes para outra escola
     - [Transferência] do ifes para outra instituição
-    - [Transferencia]do ifes pra outra escola
+    - [Transferencia] do ifes pra outra escola
     - [transferencia] do ifes pra outra instituição
     - [transferencia] do ifes proutra escola
     - [transferencia] do ifes p outra escola
     - [transferencia] do ifes p outro lugar
     - [transferencia] do ifes para outro lugar
     - [transferencia] do ifes
+    - [Transferencia] do ifes
+    - [Mudança] do ifes
+    - [mudanca] do ifes
+    - [mudansa] do ifes
+    - [mudança] do ifes para outra instituição
+    - [mudanca] do ifes para outra instituicao 
     - Para outra escola
     - O que preciso para me [transferir] do Ifes para outra escola?
     - quero me [transferir] para outra escola
@@ -682,6 +674,27 @@ nlu:
     - o que é considerado nos [trabalhos] de [alunos] com [necessidades específicas]
     - como funcionam [avaliações] para aqueles com [necessidades específicas]?
     - Como [avaliações] funcionam para pessoas com [necessidades específicas]
+    - [Avaliações] para pessoas com [necessidades específicas]
+    - [avaliacoes] para pessoas com [necessidades específicas]
+    - [avaliaçoes] para pessoas com [necessidades especificas]
+    - [avaliacao] para pessoas com [necessidades especificas]
+    - [avaliaçao] para pessoas com [necessidades especificas]
+    - [avaliação] para pessoas com [necessidades especificas]
+    - [avaliacao] para pessoas com [necessidades especificas]
+    - [Avaliações] para pessoas com [ne]
+    - [avaliacoes] para pessoas com [ne]
+    - [avaliaçoes] para pessoas com [ne]
+    - [avaliacao] para pessoas com [ne]
+    - [avaliaçao] para pessoas com [ne]
+    - [avaliação] para pessoas com [ne]
+    - [avaliacao] para pessoas com [ne]
+    - [Avaliações] para pessoas [ne]
+    - [avaliacoes] para pessoas [ne]
+    - [avaliaçoes] para pessoas [ne]
+    - [avaliacao] para pessoas [ne]
+    - [avaliaçao] para pessoas [ne]
+    - [avaliação] para pessoas [ne]
+    - [avaliacao] para pessoas [ne]
 - intent: quantidade_avaliacoes
   examples: |
     - quantidade [avalicoes]
@@ -821,6 +834,19 @@ nlu:
     - quando eu fico de [dependência]
 - intent: maximo_materias_dependencia
   examples: |
+    - Máximo de matérias da dependência
+    - máximo de matérias da dependencia
+    - máximo de matérias da dp
+    - maximo de matérias da dependência
+    - maximo de matérias da dependencia
+    - maximo de matérias da dp
+    - maximo de materias da dependência
+    - maximo de materias da dependencia
+    - maximo de materias da dp
+    - max de materias da dp
+    - max de matérias da dependência
+    - max de matérias da dependencia
+    - max de materias dp
     - Máximo de [disciplinas] dp.
     - Qual a quantidade máxima de [disciplinas] em que posso reprovar ?
     - O que acontece se eu ficar reprovado em 3 ou mais [disciplinas] ?
@@ -921,6 +947,21 @@ nlu:
     - oq eu faço para ser aprovado?
 - intent: dependencia_geral
   examples: |
+    - O que é a dependência
+    - O que é a dependencia
+    - O que é a dp
+    - o que e a dependência
+    - o que e a dependencia
+    - o que e a dp
+    - o q é a dependência
+    - o q é a dependencia
+    - o q é a dp
+    - oq é a dependência
+    - oq é a dependencia
+    - oq é a dp
+    - oq e a dependência
+    - oq e a dependencia
+    - oq e a dp
     - O que é [dependência]
     - O que é a [dependência]
     - o q é a [dependencia]
@@ -1010,6 +1051,9 @@ nlu:
     - sobre trancar matrícula
 - intent: quando_proibido_trancamento_matricula
   examples: |
+    - Quando não posso trancar matrícula
+    - qnd não posso trancar matrícula
+    - qnd nn posso trancar matricula
     - Quando não pode trancar matrícula
     - quando não pode trancar matricula
     - quando n pode trancar matricula
@@ -1295,6 +1339,19 @@ nlu:
 - intent: plano_ensino_datas
   examples: |
     - Datas Plano de Ensino
+    - Datas de entrega plano de ensino
+    - data de entrega plano de ensino
+    - datas de entrega
+    - divulgacao plano de ensino
+    - divulgacao do plano de ensino
+    - divulgacao dos planos de ensino
+    - divulgacao planos de ensino
+    - divulgaçao plano de ensino
+    - divulgaçao do plano de ensino
+    - divulgaçao dos planos de ensino
+    - divulgaçao planos de ensino
+    - datas de entrega e de divulgacao
+    - data de entrega e divulgacao
     - Quais as datas de entrega do plano de ensino?
     - Quais as datas de divulgação dos Planos de Ensino
     - Quando o professor deve divulgar o Plano de Ensino?
@@ -1391,6 +1448,10 @@ nlu:
     - O que tem no calendario academico?
 - intent: calendario_academico_localizacao
   examples: |
+    - local calendario academico
+    - Local Calendário Acadêmico
+    - Local do calendário acadêmico
+    - local do calendario academico
     - ver calendario academico
     - onde posso ver o calendario academico
     - Onde posso encontrar o Calendário Acadêmico?
@@ -1506,6 +1567,17 @@ nlu:
     - Quando pode fazer a reintegração da matrícula
 - intent: segunda_chance_avaliacao_turma
   examples: |
+    - segunda chance de avaliação sala
+    - segunda chance de avaliacao sala
+    - segunda chance avaliação sala
+    - segunda chance avaliacao sala
+    - segunda chance de avaliação turma
+    - segunda chance de avaliacao turma
+    - segunda chance avaliação turma
+    - segunda chance avaliacao turma
+    - segunda chance avaliacao para turma
+    - segunda chance avaliacao para sala
+    - segunda chance avaliacao para sala inteira
     - turma toda refazer [prova]
     - outra chance de [prova] para a turma
     - se a turma toda foi mal numa [prov]a, podemos pedir outra?
@@ -1598,7 +1670,21 @@ nlu:
     - estudo a distância, o professor tem que registrar oq no site do academico?
 - intent: reuniao_pedagogica_sobre
   examples: |
+    - o que é reunião
+    - oq é reunião
+    - oq e reuniao
+    - o que são reuniao
+    - o que é reunião pedagógica
+    - o que é reuniao pedagogica
+    - oq e reuniao pedagogica
+    - o que são reunião
+    - o que são reuniões pedagógicas
+    - o que sao reunioes pedagogicas
+    - oq sao reunioes pedagogicas
+    - oq sao reuniao
+    - oq sao reunioes
     - O que são as reuniões pedagógicas
+    - O que sao as reunioes pedagogicas
     - Para que servem as reuniões pedagogicas?
     - para oq serve reuniao pedagógica
     - quais sao os tipos de reuniao pedagogica
@@ -1659,6 +1745,22 @@ nlu:
     - sobre a reuniao pedagogica final
 - intent: reuniao_pedagogica_decisao_final
   examples: |
+    - decisão de reprovação
+    - decisão de reprovaçao
+    - decisão de reprovacao
+    - decisão de reprovacão
+    - decisao de reprovação
+    - decisao de reprovaçao
+    - decisao de reprovacao
+    - decisao de reprovacão
+    - decisões de reprovação
+    - decisões de reprovaçao
+    - decisões de reprovacao
+    - decisões de reprovacão
+    - decisoes de reprovação
+    - decisoes de reprovaçao
+    - decisoes de reprovacao
+    - decisoes de reprovacão
     - reuniao pedagogica decisão final
     - Sobre as decisões de [reprovação] na última reunião pedagógica
     - Como funciona a decisão de [reprovar] ou não no final do ano?
@@ -1677,6 +1779,10 @@ nlu:
     - Final de ano [reprovação] decisão
     - Decisão de [reprovação] na reuniao pedagogica final como funciona
     - decisões de [reprovação] reunião pedagógica
+    - decisões de reprovação na reunião pedagógica
+    - decisões de reprovação na reuniao pedagogica
+    - decisoes de reprovaçao na reuniao pedagogica
+    - decisoes de reprovacao na reunião pedagógica
 - intent: reuniao_pedagogica_membros
   examples: |
     - Participantes Reuniões Pedagógicas
@@ -2129,6 +2235,11 @@ nlu:
 - intent: transferencias
   examples: |
     - Transferências
+    - transferencia
+    - transferencias
+    - mudança
+    - mudanças
+    - mudansas
     - quero saber como fazer uma [transferência]
     - como faço uma [transferência]?
     - tipos de [transferência]?
@@ -2165,6 +2276,7 @@ nlu:
   examples: |
     - [avaliacoes]
     - [Avaliações]
+    - [avaliaçoes]
     - as [avaliações]
     - [provas]
     - [prova]
@@ -2294,6 +2406,7 @@ nlu:
     - 11
 - intent: segunda_chance_avaliacao
   examples: |
+    - segunda chance
     - Segunda chance [avaliação]
     - segunda chance de [avaliacao]
     - refazer [avalicao]
@@ -2337,6 +2450,12 @@ nlu:
     - 14
 - intent: SC_geral
   examples: |
+    - Solicitações Online
+    - solicitacoes online
+    - solicitaçoes online
+    - solicitacao Online
+    - solicitação online
+    - solicitaçao online
     - Sistema de chamados
     - Como fazer solicitação no sistema de chamados
     - quero fazer uma solicitação no sistema de chamados
@@ -2931,6 +3050,7 @@ nlu:
     - avaliacaum
     - avaliaçaum
     - avaliassaum
+    - avaliasoes
     - teste
     - prova avaliativa
     - trabalho
