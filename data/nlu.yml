@@ -189,21 +189,54 @@ nlu:
   examples: |
     - ok
     - sim
+    - siim
     - com certeza
     - com ctz
+    - cm ctz
     - ss
     - s
     - isso aí
     - isso mesmo
     - concordo
     - realmente
+    - real
     - Isso é verdade
     - vdd
     - corretp
+    - correto
     - certo
     - sim, obrigado
     - Ok
     - Isso aí
+    - pode
+    - pd
+    - claro 
+    - pode sim
+    - pd ss
+    - pode ss
+    - aceito
+- intent: voltar
+  examples: |
+    - voltar
+    - voutar
+    - volta
+    - vouta
+    - retroceder
+- intent: menu
+  examples: |
+    - opções
+    - opçoes
+    - opcoes
+    - opcões
+    - opção
+    - opçao
+    - opcão
+    - opcao
+    - menu
+    - menu de opções
+    - menu de opçoes
+    - menu de opcões
+    - menu de opcoes
 - intent: negar
   examples: |
     - não
