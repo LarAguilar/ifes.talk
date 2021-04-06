@@ -23,18 +23,6 @@ stories:
   - intent: esta_feliz
   - action: utter_usuario_esta_feliz
   - action: action_listen
-- story: afirmação
-  steps:
-  - intent: afirmar
-  - action: utter_ok
-  - action: utter_continuar_conversa
-  - action: action_listen
-- story: negação
-  steps:
-  - intent: negar
-  - action: utter_ok
-  - action: utter_continuar_conversa
-  - action: action_listen
 - story: como_esta
   steps:
   - intent: como_esta
@@ -1053,18 +1041,14 @@ stories:
   - intent: transferencias
   - action: utter_transferencias
 
-- story: Informar menu ao usuário
+- story: continuar conversa
   steps:
   - action: utter_continuar_conversa
   - intent: afirmar
   - action: utter_menu_tecnico
 
-- story: abrir o menu de opções do usuário
+- story: despedir conversa
   steps:
-  - intent: menu
-  - action: utter_menu_tecnico
-
-- story: abrir o menu de opções do usuário
-  steps:
-- intent: voltar
-  - action: utter_menu_tecnico
+  - action: utter_continuar_conversa
+  - intent: negar
+  - action: utter_despedir

@@ -1,122 +1,5 @@
 version: "2.0"
 nlu:
-- intent: informar_nome
-  examples: |
-    - [Diego](nome_usuario)
-    - [Dimitri](nome_usuario)
-    - [Uriel](nome_usuario)
-    - [Uriah](nome_usuario)
-    - [Uziel](nome_usuario)
-    - [Timóteo](nome_usuario)
-    - [Thalita](nome_usuario)
-    - [Jessica](nome_usuario)
-    - [Miguel](nome_usuario)
-    - [Sophia](nome_usuario)
-    - [Davi](nome_usuario)
-    - [Alice](nome_usuario)
-    - [Arthur](nome_usuario)
-    - [Julia](nome_usuario)
-    - [Pedro](nome_usuario)
-    - [Isabella](nome_usuario)
-    - [Gabriel](nome_usuario)
-    - [Manuela](nome_usuario)
-    - [Bernardo](nome_usuario)
-    - [Laura](nome_usuario)
-    - [Lucas](nome_usuario)
-    - [Luiza](nome_usuario)
-    - [Matheus](nome_usuario)
-    - [Valentina](nome_usuario)
-    - [Rafael](nome_usuario)
-    - [Giovanna](nome_usuario)
-    - [Heitor](nome_usuario)
-    - [Maria Eduarda](nome_usuario)
-    - [Enzo](nome_usuario)
-    - [Helena](nome_usuario)
-    - [Guilherme](nome_usuario)
-    - [Beatriz](nome_usuario)
-    - [Nicolas](nome_usuario)
-    - [Maria Luiza](nome_usuario)
-    - [Lorenzo](nome_usuario)
-    - [Lara](nome_usuario)
-    - [Gustavo](nome_usuario)
-    - [Mariana](nome_usuario)
-    - [Felipe](nome_usuario)
-    - [Nicole](nome_usuario)
-    - [Samuel](nome_usuario)
-    - [Rafaela](nome_usuario)
-    - [João Pedro](nome_usuario)
-    - [Heloísa](nome_usuario)
-    - [Daniel](nome_usuario)
-    - [Isadora](nome_usuario)
-    - [Vitor](nome_usuario)
-    - [Lívia](nome_usuario)
-    - [Leonardo](nome_usuario)
-    - [Maria Clara](nome_usuario)
-    - [Henrique](nome_usuario)
-    - [Ana Clara](nome_usuario)
-    - [Theo](nome_usuario)
-    - [Lorena](nome_usuario)
-    - [Murilo](nome_usuario)
-    - [Gabriela](nome_usuario)
-    - [Eduardo](nome_usuario)
-    - [Yasmin](nome_usuario)
-    - [Pedro Henrique](nome_usuario)
-    - [Isabelly](nome_usuario)
-    - [Pietro](nome_usuario)
-    - [Sarah](nome_usuario)
-    - [Cauã](nome_usuario)
-    - [Ana Julia](nome_usuario)
-    - [Isaac](nome_usuario)
-    - [Letícia](nome_usuario)
-    - [Caio](nome_usuario)
-    - [Ana Luiza](nome_usuario)
-    - [Vinicius](nome_usuario)
-    - [Melissa](nome_usuario)
-    - [Benjamin](nome_usuario)
-    - [Marina](nome_usuario)
-    - [João](nome_usuario)
-    - [Clara](nome_usuario)
-    - [Lucca](nome_usuario)
-    - [Cecília](nome_usuario)
-    - [João Miguel](nome_usuario)
-    - [Esther](nome_usuario)
-    - [Bryan](nome_usuario)
-    - [Emanuelly](nome_usuario)
-    - [Joaquim](nome_usuario)
-    - [Rebeca](nome_usuario)
-    - [João Vitor](nome_usuario)
-    - [Ana Beatriz](nome_usuario)
-    - [Thiago](nome_usuario)
-    - [Lavínia](nome_usuario)
-    - [Antônio](nome_usuario)
-    - [Vitória](nome_usuario)
-    - [Davi Lucas](nome_usuario)
-    - [Bianca](nome_usuario)
-    - [Francisco](nome_usuario)
-    - [Catarina](nome_usuario)
-    - [Larissa](nome_usuario)
-    - [Bruno](nome_usuario)
-    - [Maria Fernanda](nome_usuario)
-    - [Emanuel](nome_usuario)
-    - [Fernanda](nome_usuario)
-    - [João Gabriel](nome_usuario)
-    - [Amanda](nome_usuario)
-    - [Ian](nome_usuario)
-    - [Alícia](nome_usuario)
-    - [Davi Luiz](nome_usuario)
-    - [Carolina](nome_usuario)
-    - [Rodrigo](nome_usuario)
-    - [Agatha](nome_usuario)
-    - [Otávio](nome_usuario)
-    - [Gabrielly](nome_usuario)
-    - [Levi](nome_usuario)
-    - [Ulises](nome_usuario)
-    - O meu nome é [Frederico](nome_usuario)
-    - Me chamo [Carlos](nome_usuario)
-    - Sou o [Paulo](nome_usuario)
-    - Eu sou o [Pedro](nome_usuario)
-    - Sou [Antônio](nome_usuario)
-    - [Joao](nome_usuario)
 - intent: informar_campus
   examples: |
     - sou do campus [Alegre](campus)
@@ -210,7 +93,7 @@ nlu:
     - Isso aí
     - pode
     - pd
-    - claro 
+    - claro
     - pode sim
     - pd ss
     - pode ss
@@ -530,7 +413,7 @@ nlu:
     - [mudanca] do ifes
     - [mudansa] do ifes
     - [mudança] do ifes para outra instituição
-    - [mudanca] do ifes para outra instituicao 
+    - [mudanca] do ifes para outra instituicao
     - Para outra escola
     - O que preciso para me [transferir] do Ifes para outra escola?
     - quero me [transferir] para outra escola
@@ -633,6 +516,8 @@ nlu:
     - como estudar de [noite]
     - posso estudar no [matutino]?
     - tem como eu [trocar] para o [período noturno]?
+    - Mudança de turno
+    - mudança de turno
 - intent: mudanca_turma
   examples: |
     - [Mudança] de turma
@@ -665,6 +550,7 @@ nlu:
     - como faço um curso diferente do meu?
     - [transferência] de curso
     - quero [transferir] de curso
+    - mudança curso
 - intent: prazos_entregas_avaliacoes
   examples: |
     - Entrega de [avaliação]
@@ -713,21 +599,18 @@ nlu:
     - [avaliacao] para pessoas com [necessidades especificas]
     - [avaliaçao] para pessoas com [necessidades especificas]
     - [avaliação] para pessoas com [necessidades especificas]
-    - [avaliacao] para pessoas com [necessidades especificas]
     - [Avaliações] para pessoas com [ne]
     - [avaliacoes] para pessoas com [ne]
     - [avaliaçoes] para pessoas com [ne]
     - [avaliacao] para pessoas com [ne]
     - [avaliaçao] para pessoas com [ne]
     - [avaliação] para pessoas com [ne]
-    - [avaliacao] para pessoas com [ne]
     - [Avaliações] para pessoas [ne]
     - [avaliacoes] para pessoas [ne]
     - [avaliaçoes] para pessoas [ne]
     - [avaliacao] para pessoas [ne]
     - [avaliaçao] para pessoas [ne]
     - [avaliação] para pessoas [ne]
-    - [avaliacao] para pessoas [ne]
 - intent: quantidade_avaliacoes
   examples: |
     - quantidade [avalicoes]
@@ -1093,10 +976,8 @@ nlu:
     - quando nn pode trancar matricula
     - qnd não pode trancar matrícula
     - qnd nn pd trancar matricula
-    - Quando não posso trancar matrícula
     - quando nao posso trancar matricula
     - qnd nao posso trancar matricula
-    - qnd nn posso trancar matricula
     - quando o [discente] não pode cancelar matricula
     - em que circunstâncias não posso trancar a minha matrícula
     - quando não posso trancar a matrícula
@@ -1359,7 +1240,10 @@ nlu:
     - [normas e regulamento]
 - intent: plano_ensino_contem
   examples: |
+    - conteudo plano de ensino
     - Conteúdo plano de ensino
+    - conteudo plano ensino
+    - conteudo plano ens
     - O que o Plano de Ensino contém?
     - O que deve estar no Plano de Ensino?
     - Oq deve estar incluido no plano de ensino?

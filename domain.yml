@@ -2,15 +2,16 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- afirmar
+- mudanca_turno
+- informar_campus
+- mudanca_curso
 - rod_tecnico
 - cumprimento
 - transferencias
 - aluno_ifes
 - nlu_fallback
-- informar_nome
-- informar_campus
 - despedir
-- afirmar
 - negar
 - como_esta
 - agradecer
@@ -26,9 +27,7 @@ intents:
 - representantes_da_turma
 - mudanca_modalidade_presencial_distancia
 - mudanca_campus
-- mudanca_turno
 - mudanca_turma
-- mudanca_curso
 - prazos_entregas_avaliacoes
 - conteudos_avaliacoes
 - conteudos_avaliacoes_necessidadades_especificas
@@ -478,7 +477,7 @@ responses:
   - text: O Ifes, convicto de sua responsabilidade social e em respeito às disposições legais vigentes, deverá garantir o atendimento educacional especializado e o fornecimento ou a concessão de materiais especializados e recursos humanos para os discentes público da Educação Especial, atendendo ao princípio da igualdade, como meio da garantia das condições para o acesso, a permanência, a participação e a aprendizagem.
   utter_educacao_especial:
   - text: "O Ifes, convicto de sua responsabilidade social e em respeito às disposições legais vigentes, deverá garantir o atendimento educacional especializado e o fornecimento ou a concessão de materiais especializados e recursos humanos para os discentes público da Educação Especial, atendendo ao princípio da igualdade, como meio da garantia das condições para o acesso, a permanência, a participação e a aprendizagem. \nAlunos que se enquadram na educação especial recebem estratégias diferenciadas e flexibilização de metodologias visando maximizar seu aprendizado!"
-  utter_transferencias: 
+  utter_transferencias:
   - text: "De qual das seguintes opções sobre transferência você gostaria de saber mais?\n\n- Transferência para o IFES\n- Transferência do IFES para outra instituição\n- Mudança da modalidade entre presencial e a distância\n- Mudança de campus\n- Mudança de turno\n- Mudança de turma\n- Mudança de curso\n- Solicitações Online"
   utter_representantes:
   - text: "De qual das seguintes opções sobre os representantes você gostaria de saber mais sobre?\n\n- Sobre representantes de turma\n- Reuniões dos representantes\n"
@@ -524,7 +523,6 @@ responses:
   - text: "O Regulamento da Organização Didática (ROD) dos cursos Técnicos, versão 2020, pode ser encontrado no link: <https://www.ifes.edu.br/images/stories/-publicacoes/documentos-institucionais/regulamento-organizacao-didatica/rod-tecnicos.pdf>.\n\nLembrando que podem existir algumas regulamentações internas do campus para complementar alguns assuntos, então você deve procurar o NGP ou o coordenador do seu curso para mais informações."
   utter_menu_tecnico:
   - text: "Você pode digitar suas dúvidas de acordo com as opções abaixo. Fique a vontade para escolher xD\n\n1) Transferências/Mudanças\n2) Representante de Turma\n3) Avaliações\n4) Pontuações\n5) Dependência\n6) Revisão de Notas\n7) Dias Letivos\n8) Matrícula\n9) Regime Domiciliar\n10) Plano de Ensino\n11) Calendário Acadêmico\n12) Reuniões Pedagógicas\n13) Segunda Chance Avaliação\n14) ROD\n15) Solicitações Online"
-
   utter_rod_graduacao:
   - text: "Ainda estou estudando o Regulamento da Organização Didática (ROD) dos cursos de Graduação.\nEm breve serei especialista nele e poderei te passar as informações corretas!\nEnquanto isso, você pode acessar o ROD pelo link <https://www.ifes.edu.br/images/stories/files/Pro_reitoria_ensino/atualizacao_rod/PORTARIA_N_1149-2017_Homologa_ROD_Graduacao.pdf>\nGostaria de saber sobre algum outro ROD?"
   utter_rod_pos_graduacao:
@@ -581,6 +579,7 @@ actions:
 - utter_matricula
 - utter_matricula_sobre
 - utter_maximo_materias_dependencia
+- utter_menu_tecnico
 - utter_meu_genero
 - utter_meu_objetivo
 - utter_minha_license
@@ -648,7 +647,6 @@ actions:
 - utter_rod_graduacao
 - utter_rod_pos_graduacao
 - utter_rod_tecnico
-- utter_menu_tecnico
 - utter_segunda_chance_avaliacao
 - utter_segunda_chance_avaliacao_discente
 - utter_segunda_chance_avaliacao_turma
