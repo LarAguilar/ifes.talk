@@ -257,9 +257,8 @@ responses:
   - text: Isso é ótimo! Qualquer coisa então, só falar ok?
   - text: Que bom! Espero que tudo continue bem com você :)
   utter_ok:
-  - text: Tabom
-  - text: Ok
-  - text: Okay
+  - text: Ok!
+  - text: Okay!
   utter_como_estou:
   - text: Estou bem, obrigado! E você?
   - text: Tudo bem, obrigado! Posso te ajudar com algo?
