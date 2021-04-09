@@ -170,6 +170,7 @@ intents:
 - processo_seletivo
 - menu
 - voltar
+- session_start
 entities:
 - campus
 - nome_usuario
@@ -541,6 +542,7 @@ actions:
 - action_check_trancamento_matricula_sobre
 - action_uncheck_all
 - action_uncheck_uncheck_all
+- action_session_start
 - utter_aluno_ifes
 - utter_avaliacoes
 - utter_calendario_academico

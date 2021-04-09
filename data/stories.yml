@@ -1041,6 +1041,19 @@ stories:
   - intent: transferencias
   - action: utter_transferencias
 
+- story: iniciar nome form
+  steps:
+  - action: nome_form
+  - active_loop: nome_form
+  - slot_was_set:
+    - requested_slot: primeiro_nome
+  - slot_was_set:
+    - primeiro_nome: Jurema
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_cumprimentar_usuario_nome
+
 - story: continuar conversa
   steps:
   - action: utter_continuar_conversa
@@ -1052,3 +1065,19 @@ stories:
   - action: utter_continuar_conversa
   - intent: negar
   - action: utter_despedir
+
+- story: começar sessão
+  steps:
+  - intent: session_start
+  - action: action_session_start
+  - action: utter_cumprimentar
+  - action: nome_form
+  - active_loop: nome_form
+  - slot_was_set:
+    - requested_slot: primeiro_nome
+  - slot_was_set:
+    - primeiro_nome: Jurema
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_cumprimentar_usuario_nome
