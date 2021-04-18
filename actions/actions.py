@@ -17,6 +17,37 @@ class ActionSessionStart(Action):
 
         return events
 
+# Botoes do menu tecnico
+class ActionMenuTecnico(Action):
+    def name(self) -> Text:
+        return "action_menu_tecnico"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_menu_tecnico", buttons = [
+                {"payload": "/transferencias", "title": "Transferências/Mudanças"},
+                {"payload": "/representantes", "title": "Representante de Turma"},
+                {"payload": "/avaliacoes", "title": "Avaliações"},
+                {"payload": "/pontuacoes", "title": "Pontuações"},
+                {"payload": "/dependencia", "title": "Dependência"},
+                {"payload": "/revisao_notas", "title": "Revisão de Notas"},
+                {"payload": "/dias_letivos", "title": "Dias Letivos"},
+                {"payload": "/matricula", "title": "Matrícula"},
+                {"payload": "/regime_domiciliar", "title": "Regime Domiciliar"},
+                {"payload": "/plano_ensino", "title": "Plano de Ensino"},
+                {"payload": "/calendario_academico", "title": "Calendário Acadêmico"},
+                {"payload": "/reuniao_pedagogica", "title": "Reuniões Pedagógicas"},
+                {"payload": "/segunda_chance_avaliacao", "title": "Segunda Chance Avaliação"},
+                {"payload": "/rod", "title": "ROD"},
+                {"payload": "/SC_geral", "title": "Solicitações Online"}
+            ], button_type = "vertical")
+        return []
+
 ## Função que de acordo com o intent anterior do usuário, pega seu campus, e manda uma resposta junto do link do calendário acadêmico do site do seu campus
 class ActionLinkCampus(Action):
 

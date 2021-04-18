@@ -522,7 +522,7 @@ responses:
   utter_rod_tecnico:
   - text: "O Regulamento da Organização Didática (ROD) dos cursos Técnicos, versão 2020, pode ser encontrado no link: https://bit.ly/3sW1OfL \n\nLembrando que podem existir algumas regulamentações internas do campus para complementar alguns assuntos, então você deve procurar o NGP ou o coordenador do seu curso para mais informações."
   utter_menu_tecnico:
-  - text: "Você pode digitar suas dúvidas de acordo com as opções abaixo. Fique a vontade para escolher xD\n\n1) Transferências/Mudanças\n2) Representante de Turma\n3) Avaliações\n4) Pontuações\n5) Dependência\n6) Revisão de Notas\n7) Dias Letivos\n8) Matrícula\n9) Regime Domiciliar\n10) Plano de Ensino\n11) Calendário Acadêmico\n12) Reuniões Pedagógicas\n13) Segunda Chance Avaliação\n14) ROD\n15) Solicitações Online"
+  - text: "Você pode tirar suas dúvidas clicando nos botões abaixo ou digitando. Fique a vontade para escolher xD"
   utter_rod_graduacao:
   - text: "Ainda estou estudando o Regulamento da Organização Didática (ROD) dos cursos de Graduação.\nEm breve serei especialista nele e poderei te passar as informações corretas!\nEnquanto isso, você pode acessar o ROD pelo link https://bit.ly/3wAxCsO \n\nGostaria de saber sobre algum outro ROD?"
   utter_rod_pos_graduacao:
@@ -674,6 +674,7 @@ actions:
 - utter_transferencia_para_outra_escola
 - utter_transferencias
 - utter_usuario_esta_feliz
+- action_menu_tecnico
 forms:
   nome_form:
     primeiro_nome:

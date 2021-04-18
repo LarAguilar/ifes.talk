@@ -954,7 +954,7 @@ stories:
   steps:
     - intent: rod_tecnico
     - action: utter_rod_tecnico
-    - action: utter_menu_tecnico
+    - action: action_menu_tecnico
     - action: action_listen
 - story: ROD graduacao
   steps:
@@ -1018,7 +1018,7 @@ stories:
   - action: utter_aluno_ifes
   - intent: rod_tecnico
   - action: utter_rod_tecnico
-  - action: utter_menu_tecnico
+  - action: action_menu_tecnico
 
 - story: interactive_story_1
   steps:
@@ -1052,17 +1052,17 @@ stories:
   steps:
   - action: utter_continuar_conversa
   - intent: afirmar
-  - action: utter_menu_tecnico
+  - action: action_menu_tecnico
 
 - story: continuar conversa
   steps:
   - intent: voltar
-  - action: utter_menu_tecnico
+  - action: action_menu_tecnico
 
 - story: continuar conversa
   steps:
   - intent: menu
-  - action: utter_menu_tecnico
+  - action: action_menu_tecnico
 
 - story: despedir conversa
   steps:
