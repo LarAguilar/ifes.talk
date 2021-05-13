@@ -677,6 +677,7 @@ nlu:
     - qual o mínimo de [pontos] do boletim que preciso para fazer recuperação?
 - intent: pontuacao_semestral
   examples: |
+    - pontuacao semestral
     - Sobre pontuação semestral
     - Qual a [pontuação] de cada semestre ?
     - qual a [pontuação] semestral
@@ -1219,6 +1220,9 @@ nlu:
     - [bom tarde]
     - [bom dia]
     - [boa noite]
+    - oi
+    - ola
+    - oi
     - oii
     - Oii
 - intent: rod_geral
@@ -1539,6 +1543,7 @@ nlu:
     - Como determinam o quanto alguem esta indo bem estudando ead?
 - intent: pontuacao_trimestral
   examples: |
+    - pontuacao trimestral
     - [Pontuação] trimestral
     - Sobre [pontuação] trimestral
     - Qual a [pontuação] de cada trimestre?
@@ -1555,6 +1560,7 @@ nlu:
     - total de [pontos] de um trimestre
 - intent: pontuacao_bimestral
   examples: |
+    - pontuacao bimestral
     - [Pontuação] bimestral
     - Sobre [pontuação] bimestral
     - Qual a [pontuação] de cada bimestre?
@@ -1645,6 +1651,7 @@ nlu:
     - sobre a reuniao pedagogica intermediaria
 - intent: reuniao_pedagogica_final
   examples: |
+    - reuniao pedagogica final
     - Reunião Pedagógica Final
     - sobre reuniao pedagogica final
     - informacoes da reuniao pedagogica final

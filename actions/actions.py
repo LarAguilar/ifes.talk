@@ -42,11 +42,401 @@ class ActionMenuTecnico(Action):
                 {"payload": "/plano_ensino", "title": "Plano de Ensino"},
                 {"payload": "/calendario_academico", "title": "Calendário Acadêmico"},
                 {"payload": "/reuniao_pedagogica", "title": "Reuniões Pedagógicas"},
-                {"payload": "/segunda_chance_avaliacao", "title": "Segunda Chance Avaliação"},
                 {"payload": "/rod", "title": "ROD"},
                 {"payload": "/SC_geral", "title": "Solicitações Online"}
             ], button_type = "vertical")
         return []
+
+
+# Botoes externo ifes
+class ActionExternoIfes(Action):
+    def name(self) -> Text:
+        return "action_externo_ifes"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_externo_ifes", buttons = [
+                {"payload": "/rod_tecnico", "title": "Técnico"},
+                {"payload": "/rod_graduacao", "title": "Graduação"},
+                {"payload": "/rod_pos_graduacao", "title": "Pós-Graduação"},
+                {"payload": "/processo_seletivo", "title": "Processos Seletivos"}
+            ], button_type = "vertical")
+        return []
+
+# Botoes servidor ifes
+class ActionServidorIfes(Action):
+    def name(self) -> Text:
+        return "action_servidor_ifes"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_servidor_ifes", buttons = [
+                {"payload": "/rod_tecnico", "title": "Técnico"},
+                {"payload": "/rod_graduacao", "title": "Graduação"},
+                {"payload": "/rod_pos_graduacao", "title": "Pós-Graduação"},
+                {"payload": "/processo_seletivo", "title": "Processos Seletivos"}
+            ], button_type = "vertical")
+        return []
+
+# Botoes transferencias / mudanças
+class ActionTransferencias(Action):
+    def name(self) -> Text:
+        return "action_transferencias"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_transferencias", buttons = [
+                {"payload": "/transferencia_de_outra_escola", "title": "Transferência para o IFES"},
+                {"payload": "/transferencia_para_outra_escola", "title": "Transferência do IFES para outra instituição"},
+                {"payload": "/mudanca_modalidade_presencial_distancia", "title": "Mudança de modalidade presencial/a distância"},
+                {"payload": "/mudanca_campus", "title": "Mudança de campus"},
+                {"payload": "/mudanca_turno", "title": "Mudança de turno"},
+                {"payload": "/mudanca_turma", "title": "Mudança de turma"},
+                {"payload": "/mudanca_curso", "title": "Mudança de curso"},
+                {"payload": "/SC_geral", "title": "Solicitações Online"}
+            ], button_type = "vertical")
+        return []
+
+# Botoes representantes
+class ActionRepresentantes(Action):
+    def name(self) -> Text:
+        return "action_representantes"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any]
+    ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_representantes", buttons = [
+                {"payload": "/representantes_da_turma", "title": "Sobre representantes de turma"},
+                {"payload": "/representantes_reunioes", "title": "Reuniões dos representantes"}
+            ], button_type = "vertical")
+        return []
+
+# Botoes avaliacoes
+class ActionAvaliacoes(Action):
+    def name(self) -> Text:
+        return "action_avaliacoes"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_avaliacoes", buttons = [
+                {"payload": "/conteudos_avaliacoes", "title": "Conteúdos avaliações"},
+                {"payload": "/conteudos_avaliacoes_necessidadades_especificas", "title": "Av. para pessoas com necessidades específicas (NE)"},
+                {"payload": "/prazos_entregas_avaliacoes", "title": "Prazos das entregas de avaliações"},
+                {"payload": "/quantidade_avaliacoes", "title": "Quantidade de avaliações"},
+                {"payload": "/pontuacoes", "title": "Pontuação"},
+                {"payload": "/segunda_chance_avaliacao", "title": "Segunda Chance Avaliação"}
+            ], button_type = "vertical")
+        return []
+
+#################################################################################
+# Botoes Segunda Chance Avaliacao
+class ActionSegundaChanceAvaliacao(Action):
+    def name(self) -> Text:
+        return "action_segunda_chance_avaliacao"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_segunda_chance_avaliacao", buttons = [
+                {"payload": "/segunda_chance_avaliacao_turma", "title": "Segunda chance de avaliação por uma sala inteira"},
+                {"payload": "/segunda_chance_avaliacao_discente", "title": "Segunda chance de avaliação por um aluno"},
+                {"payload": "/SC_geral", "title": "Solicitações Online"}
+            ], button_type = "vertical")
+        return []
+
+
+# Botoes pontuacoes
+class ActionPontuacaoAvaliacoes(Action):
+    def name(self) -> Text:
+        return "action_pontuacoes"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_pontuacoes", buttons = [
+                {"payload": "/pontuacao_semestral", "title": "Pontuação semestral"},
+                {"payload": "/pontuacao_trimestral", "title": "Pontuação trimestral"},
+                {"payload": "/pontuacao_bimestral", "title": "Pontuação bimestral"},
+                {"payload": "/pontuacao_avaliacoes", "title": "Pontuação das avaliações"}
+            ], button_type = "vertical")
+        return []
+
+# Botoes dependencia
+class ActionDependencia(Action):
+    def name(self) -> Text:
+        return "action_dependencia"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_dependencia", buttons = [
+                {"payload": "/dependencia_geral", "title": "O que é a dependênca"},
+                {"payload": "/dependencia_condicoes", "title": "Quando fico de dependência"},
+                {"payload": "/maximo_materias_dependencia", "title": "Máximo de matérias"},
+                {"payload": "/SC_geral", "title": "Solicitações Online"}
+            ], button_type = "vertical")
+        return []
+
+# Botoes Revisão de notas
+class ActionRevisaoNotas(Action):
+    def name(self) -> Text:
+        return "action_revisao_notas"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_revisao_notas", buttons = [
+                {"payload": "/revisao_notas_parciais", "title": "Revisão das notas das avaliações"},
+                {"payload": "/revisao_notas_finais", "title": "Revisão da nota final"},
+                {"payload": "/SC_geral", "title": "Solicitações Online"}
+            ], button_type = "vertical")
+        return []
+
+# Botoes dias letivos
+class ActionDiasLetivos(Action):
+    def name(self) -> Text:
+        return "action_dias_letivos"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_dias_letivos", buttons = [
+                {"payload": "/numero_dias_letivos", "title": "Número de dias letivos"},
+                {"payload": "/tempo_oferta_aulas", "title": "Dias e horários que podem ser letivos"}
+            ], button_type = "vertical")
+        return []
+
+# Botoes Matricula
+class ActionMatricula(Action):
+    def name(self) -> Text:
+        return "action_matricula"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_matricula", buttons = [
+                {"payload": "/matricula_sobre", "title": "O que é a matrícula"},
+                {"payload": "/documentos_matricula", "title": "Documentos necessários para a matrícula"},
+                {"payload": "/prazo_matricula", "title": "Prazos para fazer a matrícula"},
+                {"payload": "/renovacao_matricula", "title": "Renovação da matrícula"},
+                {"payload": "/trancamento_matricula", "title": "Trancamento de matrícula"},
+                {"payload": "/cancelamento_matricula", "title": "Cancelamento da matrícula"},
+                {"payload": "/reintegracao_matricula", "title": "Reintegração da matrícula"},
+                {"payload": "/SC_geral", "title": "Solicitações Online"}
+            ], button_type = "vertical")
+        return []
+
+# Botoes trancamento matricula
+class ActionTrancamentoMatricula(Action):
+    def name(self) -> Text:
+        return "action_trancamento_matricula"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_trancamento_matricula", buttons = [
+                {"payload": "/trancamento_matricula_sobre", "title": "Sobre o trancamento de matrícula"},
+                {"payload": "/quando_proibido_trancamento_matricula", "title": "Quando não posso trancar a matrícula"},
+                {"payload": "/SC_geral", "title": "Solicitações Online"}
+            ], button_type = "vertical")
+        return []
+
+# Botoes Reintegração matricula
+class ActionReintegracaoMatricula(Action):
+    def name(self) -> Text:
+        return "action_reintegracao_matricula"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_reintegracao_matricula", buttons = [
+                {"payload": "/reintegracao_matricula_sobre", "title": "O que é a reintegração da matrícula"},
+                {"payload": "/reintegracao_matricula_condicoes", "title": "Quando pode fazer a reintegração da matrícula"},
+                {"payload": "/SC_geral", "title": "Solicitações Online"}
+            ], button_type = "vertical")
+        return []
+
+
+# Botoes Regime domiciliar
+class ActionRegimeDomiciliar(Action):
+    def name(self) -> Text:
+        return "action_regime_domiciliar"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_regime_domiciliar", buttons = [
+                {"payload": "/regime_domiciliar_sobre", "title": "Sobre o regime domiciliar"},
+                {"payload": "/regime_domiciliar_condicoes", "title": "Quem pode solicitar o regime domiciliar"},
+                {"payload": "/regime_domiciliar_efetivacao", "title": "Quando o regime domiciliar é efetivado"},
+                {"payload": "/prazo_regime_domiciliar_laudo_medico", "title": "Prazo para apresentar laudo médico"},
+                {"payload": "/regime_domiciliar_gravidas", "title": "Sobre o regime domiciliar para grávidas"},
+                {"payload": "/SC_geral", "title": "Solicitações Online"}
+            ], button_type = "vertical")
+        return []
+
+# Botoes Plano de Ensino
+class ActionPlanoEnsino(Action):
+    def name(self) -> Text:
+        return "action_plano_ensino"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_plano_ensino", buttons = [
+                {"payload": "/plano_ensino_contem", "title": "Conteúdo plano de ensino"},
+                {"payload": "/plano_ensino_datas", "title": "Datas de entrega e de divulgação dos planos de ensino"}
+            ], button_type = "vertical")
+        return []
+
+# Botoes Calendário Academico
+class ActionCalendarioAcademico(Action):
+    def name(self) -> Text:
+        return "action_calendario_academico"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_calendario_academico", buttons = [
+                {"payload": "/", "title": "Conteúdo calendário acadêmico"},
+                {"payload": "/", "title": "Local do calendário acadêmico"}
+            ], button_type = "vertical")
+        return []
+
+# Botoes reuniões pedagogicas
+class ActionReunioesPedagogicas(Action):
+    def name(self) -> Text:
+        return "action_reuniao_pedagogica"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_reuniao_pedagogica", buttons = [
+                {"payload": "/reuniao_pedagogica_sobre", "title": "Para que serve as reuniões pedagógicas"},
+                {"payload": "/reuniao_pedagogica_membros", "title": "Membros das reuniões pedagógicas"},
+                {"payload": "/reuniao_pedagogica_quantidade", "title": "Quantidade de reuniões pedagógicas"},
+                {"payload": "/reuniao_pedagogica_inicial", "title": "Reunião pedagógica inicial"},
+                {"payload": "/reuniao_pedagogica_intermediaria", "title": "Reunião pedagógica intermediária"},
+                {"payload": "/reuniao_pedagogica_final", "title": "Reunião pedagógica final"},
+                {"payload": "/reuniao_pedagogica_decisao_final", "title": "Decisões de reprovação"}
+            ], button_type = "vertical")
+        return []
+
+# Botoes ROD
+class ActionROD(Action):
+    def name(self) -> Text:
+        return "action_rod"
+
+    async def run(
+    self,
+    dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any],
+  ) -> List[EventType]:
+
+        dispatcher.utter_message(template = "utter_rod", buttons = [
+                {"payload": "/rod_geral", "title": "O que é o ROD"},
+                {"payload": "/rod_2020_validade", "title": "Validade do ROD atual"},
+                {"payload": "/tit_cap_rod", "title": "O capítulo do ROD que fala sobre o ROD"},
+                {"payload": "/sumario_rod", "title": "Sumário do ROD atual"}
+            ], button_type = "vertical")
+        return []
+
+
+
+# # Botoes ??##
+# class Action##(Action):
+#     def name(self) -> Text:
+#         return "action_##"
+
+#     async def run(
+#     self,
+#     dispatcher: CollectingDispatcher,
+#     tracker: Tracker,
+#     domain: Dict[Text, Any],
+#   ) -> List[EventType]:
+
+#         dispatcher.utter_message(template = "utter_##", buttons = [
+#                 {"payload": "/", "title": ""},
+#                 {"payload": "/", "title": ""},
+#                 {"payload": "/", "title": ""},
+#                 {"payload": "/", "title": ""},
+#                 {"payload": "/", "title": ""}
+#             ], button_type = "vertical")
+#         return []
+
 
 ## Função que de acordo com o intent anterior do usuário, pega seu campus, e manda uma resposta junto do link do calendário acadêmico do site do seu campus
 class ActionLinkCampus(Action):

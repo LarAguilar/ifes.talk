@@ -726,82 +726,82 @@ stories:
 - story: Assunto 1
   steps:
     - intent: transferencias
-    - action: utter_transferencias
+    - action: action_transferencias
     - action: action_listen
 - story: Assunto 2
   steps:
     - intent: representantes
-    - action: utter_representantes
+    - action: action_representantes
     - action: action_listen
 - story: Assunto 3
   steps:
     - intent: avaliacoes
-    - action: utter_avaliacoes
+    - action: action_avaliacoes
     - action: action_listen
 - story: Assunto 4
   steps:
     - intent: pontuacoes
-    - action: utter_pontuacoes
+    - action: action_pontuacoes
     - action: action_listen
 - story: Assunto 5
   steps:
     - intent: dependencia
-    - action: utter_dependencia
+    - action: action_dependencia
     - action: action_listen
 - story: Assunto 6
   steps:
     - intent: revisao_notas
-    - action: utter_revisao_notas
+    - action: action_revisao_notas
     - action: action_listen
 - story: Assunto 7
   steps:
     - intent: dias_letivos
-    - action: utter_dias_letivos
+    - action: action_dias_letivos
     - action: action_listen
 - story: Assunto 8
   steps:
     - intent: matricula
-    - action: utter_matricula
+    - action: action_matricula
     - action: action_listen
 - story: Assunto 8.1.5
   steps:
     - intent: trancamento_matricula
-    - action: utter_trancamento_matricula
+    - action: action_trancamento_matricula
     - action: action_listen
 - story: Assunto 8.1.7
   steps:
     - intent: reintegracao_matricula
-    - action: utter_reintegracao_matricula
+    - action: action_reintegracao_matricula
     - action: action_listen
 - story: Assunto 9
   steps:
     - intent: regime_domiciliar
-    - action: utter_regime_domiciliar
+    - action: action_regime_domiciliar
     - action: action_listen
 - story: Assunto 10
   steps:
     - intent: plano_ensino
-    - action: utter_plano_ensino
+    - action: action_plano_ensino
     - action: action_listen
 - story: Assunto 11
   steps:
     - intent: calendario_academico
-    - action: utter_calendario_academico
+    - action: action_calendario_academico
     - action: action_listen
 - story: Assunto 12
   steps:
     - intent: segunda_chance_avaliacao
-    - action: utter_segunda_chance_avaliacao
+    - action: action_segunda_chance_avaliacao
     - action: action_listen
 - story: Assunto 13
   steps:
     - intent: reuniao_pedagogica
-    - action: utter_reuniao_pedagogica
+    - action: action_reuniao_pedagogica
     - action: action_listen
 - story: Assunto 14
   steps:
     - intent: rod
-    - action: utter_rod
+    - action: action_rod
     - action: action_listen
   
 # Sistema de Chamados
@@ -943,12 +943,12 @@ stories:
 - story: Servidor ifes
   steps:
     - intent: servidor_ifes
-    - action: utter_servidor_ifes
+    - action: action_servidor_ifes
     - action: action_listen
 - story: Externo ifes
   steps:
     - intent: externo_ifes
-    - action: utter_externo_ifes
+    - action: action_externo_ifes
     - action: action_listen
 - story: ROD tecnico
   steps:

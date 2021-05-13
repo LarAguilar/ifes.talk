@@ -237,6 +237,13 @@ slots:
 responses:
   utter_cumprimentar_usuario_nome:
   - text: 'Prazer, {primeiro_nome}! Agora, me fala se você é aluno(a) do ifes, servidor(a) do ifes ou não é do ifes:'
+    buttons:
+    - title: "Aluno (a)"
+      payload: "/aluno_ifes"
+    - title: "Servidor (a)"
+      payload: "/servidor_ifes"
+    - title: "Não sou do ifes"
+      payload: "/externo_ifes"
   utter_despedir:
   - text: "Foi um prazer te ajudar! Sempre que tiver alguma dúvida, volte aqui :)\n\nAté logo!"
   - text: "Foi um prazer te ajudar! Sempre que precisar, volte aqui :D\n\nAté a próxima!"
@@ -352,11 +359,11 @@ responses:
   utter_dependencia_geral:
   - text: "O aluno que reprovar em até 2 matérias entrará no regime de dependência. Esse regime permite ao aluno ir para o próximo período letivo, mas ele será obrigado a cursar essas disciplinas em outro horário.\n\nPara mais informações, basta consultar o artigo 87 do ROD."
   utter_numero_dias_letivos:
-  - text: "De modo presencial, quando em regime semestral o mínimo de dias letivos são 100, e quando é regime anual o mínimo é de 200 dias letivos. Disso tudo, está excluído o período de recuperação final... E também esses dias podem considerar aulas no sábado.\n\nÉ, eu sei... sábado letivo é triste \U0001F626 mas é necessário, então não falte.\n\nPara mais informações, basta consultar o artigo 19 § 5º §, 6º e § 7º do ROD."
+  - text: "De modo presencial, quando em regime semestral o mínimo de dias letivos são 100, e quando é regime anual, o mínimo é de 200 dias letivos. Sendo que está excluído o período de recuperação final... E também esses dias podem considerar aulas no sábado.\n\nÉ, eu sei... sábado letivo é triste \U0001F626 mas é necessário, então não falte.\n\nPara mais informações, basta consultar o artigo 19 § 5º §, 6º e § 7º do ROD."
   utter_disciplinas_optativas:
   - text: "O estudante pode cursar disciplinas optativas desde que estejam disponíveis na matriz curricular de seu curso e existam vagas.\nA matrícula deverá ser requerida na CRA (Coordenadoria de Registro Acadêmico) do seu campus.\nSó serão aprovados os alunos que não estão de dependência.\nE vale lembrar que depois que a matrícula for feita só pode cancelar dentro de 15 dias, depois não pode mais desistir.\nPara mais informações, basta consultar os artigos  38 a 41 do ROD."
   utter_quando_proibido_trancamento_matricula:
-  - text: "A matrícula não poderá ser trancada no primeiro período letivo, quando fora do prazo que foi estabelecido no calendário acadêmico ou para cursos em extinção. Mas existem as seguintes exceções:\n\n- Convocação para o serviço militar\nTratamento prolongado de saúde\n- Gravidez e problemas pós parto\n- Acompanhamento para tratamento prolongado de saúde de pessoa do arranjo familiar\n- Outros casos específicos e justificados que serão avaliados pela Coordenadoria do Curso\nPara mais informações, basta consultar o artigo 34 § 1º do ROD."
+  - text: "A matrícula não poderá ser trancada no primeiro período letivo, quando fora do prazo que foi estabelecido no calendário acadêmico ou para cursos em extinção. Mas existem as seguintes exceções:\n\n- Convocação para o serviço militar\n- Tratamento prolongado de saúde\n- Gravidez e problemas pós parto\n- Acompanhamento para tratamento prolongado de saúde de pessoa do arranjo familiar\n- Outros casos específicos e justificados que serão avaliados pela Coordenadoria do Curso\n \nPara mais informações, basta consultar o artigo 34 § 1º do ROD."
   utter_cancelamento_matricula:
   - text: "Existem 7 motivos que causam o cancelamento da matrícula, se prepara que lá vem textão \U0001F634:\n\n1) Cancelamento por vontade própria;\n2) Quando o estudante não completar todas as matérias no prazo máximo que ele tem para concluir o curso;\n3) Quando o estudante apresentar para a matrícula um documento falso ou falsificado;\n4) Quando o estudante não frequentar os primeiros 5 dias letivos, no caso de cursos presenciais. Nos cursos a distância, quando o aluno não frequentar a aula inicial e não acessar o moodle nos primeiros 5 dias letivos sem justificativa;\n5) Quando o estudante cometer algum ato de indisciplina grave ou infracional;\n6) Quando o estudante ingressante obtiver menos de 75% de frequência de todas as disciplinas do curso de qualquer período letivo do curso;\n7) Quando o estudante não efetuar sua reabertura de matrícula após o trancamento de algum período letivo.\n\nPara mais informações, basta consultar o artigo 35 do ROD."
   utter_desistente:
@@ -392,7 +399,7 @@ responses:
   utter_oferta_cursos:
   - text: "Os cursos podem funcionar de forma semestral ou anual, nas modalidades presencial e/ou a distância.\nOs cursos em regime anual podem ser organizados em bimestres, trimestres ou semestres. \nOs cursos técnicos podem ser integrados ao ensino médio, concomitante, subsequente ou EJA.\nPara mais informações, basta consultar o artigo 19 do ROD."
   utter_tempo_oferta_aulas:
-  - text: "Os cursos podem ser oferecidos nos turnos matutino, vespertino, noturno e integral.\nAs aulas podem ser dadas de segunda-feira a sabádo.\n\nPara os cursos a distância, a Educação a Distância será melhor orientada de acordo com o MEC/Setec.\n\nPara mais informações,basta consultar o artigo 20 do ROD."
+  - text: "Os cursos podem ser oferecidos nos turnos matutino, vespertino, noturno e integral.\nAs aulas podem ser dadas de segunda-feira a sabádo.\n\nSendo que a Educação a Distância será melhor orientada de acordo com o MEC/Setec.\n\nPara mais informações,basta consultar o artigo 20 do ROD."
   utter_calendario_academico_conteudo:
   - text: "No calendário acadêmico, obrigatoriamente são previstas 22 informações para estarem contidas nele. Ficaria uma lista grande demais se eu escrevesse aqui rsrs, então você pode dar uma olhadinha no ROD pelo link: https://bit.ly/3sW1OfL \n\nPara essas informações é só consultar o artigo 21."
   utter_ifes_condicoes:
@@ -424,7 +431,7 @@ responses:
   utter_reuniao_pedagogica_final:
   - text: "A Reunião Pedagógica Final serve para:\n\n1) Deliberar a respeito da situação final dos alunos;\n2) Promover a reflexão e a autoavaliação do trabalho didático-pedagógico que foi realizado; \n3) Possibilitar uma análise geral do desenvolvimento dos estudantes para os docentes poderem se planejar melhor para os próximos períodos de ensino;\n4) Sugerir estratégias de ensino para os professores que vão trabalhar novamente com alunos que não passaram;\n5) Debater a situação dos alunos que tiraram menos que 60 pontos na final desde que esses tenham tirado no mínimo 50, para decidir se esses podem passar ou não. Por causa disso mostre esforço durante o ano para poder ser aceito mesmo se não conseguir os 60!;\n6) Documentar direitinho todos os resultados finais decididos.\n\nPara mais informações, basta consultar o artigo 93 do ROD."
   utter_reuniao_pedagogica_decisao_final:
-  - text: "Na Reunião Pedagógica Final, a análise para a progressão ou retenção dos discentes que podem reprovar envolve os registros e acompanhamentos feitos pelos docentes ao longo do período letivo, em que a qualidade não pode ser menos importante que a quantidade, ou seja, se esforço foi demonstrado, tem mais chance de passar. Aqueles que têm direito ao voto final são:\nDocentes que atuam na turma;\nRepresentante do Setor Pedagógico;\nCoordenador de Curso;\n1 membro da equipe de atendimento multidisciplinar da assistência estudantil;\n1 membro do Napne para os alunos acompanhados por esse Núcleo;\nPara quem estuda a distância, mediadores que atuam na turma.\nCaso tenha um empate, vai ser priorizado o voto do(s) docente(s) da matéria em questão.\nPara mais informações, basta consultar o artigo 94 do ROD."
+  - text: "Na Reunião Pedagógica Final, a análise para a progressão ou retenção dos discentes que podem reprovar envolve os registros e acompanhamentos feitos pelos docentes ao longo do período letivo, em que a qualidade não pode ser menos importante que a quantidade, ou seja, se esforço foi demonstrado, tem mais chance de passar. Aqueles que têm direito ao voto final são:\n- Docentes que atuam na turma;\n- Representante do Setor Pedagógico;\n- Coordenador de Curso;\n- 1 membro da equipe de atendimento multidisciplinar da assistência estudantil;\n- 1 membro do Napne para os alunos acompanhados por esse Núcleo;\n- Para quem estuda a distância, mediadores que atuam na turma.\nCaso tenha um empate, vai ser priorizado o voto do(s) docente(s) da matéria em questão.\n\nPara mais informações, basta consultar o artigo 94 do ROD."
   utter_reuniao_pedagogica_membros:
   - text: "Vamos para a listinha! Os membros da Reunião Pedagógica são:\n\n1) 1 representante do setor pedagógico (participação obrigatória nas 3 reuniões);\n2) Todos os docentes que atuam na turma (participação obrigatória nas 3 reuniões);\n3) O Coordenador do Curso ou representante (participação obrigatória nas 3 reuniões);\n4) Diretor de Ensino e Coordenador Geral de Ensino (participação facultativa nas 3 reuniões);\n5) 1 representante da Coordenadoria de Registros Acadêmicos (participação obrigatória nas reunião final);\n6) 1 representante de turma (participação obrigatória na reunião intermediária);\n7) Para modalidade EJA, a turma toda deve participar em horário normal de aula na reunião intermediária;\n8) 1 representante da Coordenadoria Geral da Assistência à Comunidade ou o setor equivalente do campus (participação obrigatória nas 3 reuniões);\n9) 1 membro da equipe de atendimento multidisciplinarda assistência estudantil (participação obrigatória nas 3 reuniões);\n10) 1 membro do Napne (participação obrigatória nas 3 reuniões se a turma tem alunos acompanhados por esse núcleo). \n\nPara mais informações, basta consultar o artigo 95 do ROD."
   utter_monitoria:
@@ -464,7 +471,7 @@ responses:
   utter_tit_disposicoes_gerais_transitorias:
   - text: Dá uma olhada no título IX do ROD atual, 'do intercâmbio acadêmico'! Faz parte deste os artigos 106 a 108~
   utter_sumario_rod:
-  - text: "Aqui um sumário para você do ROD 2020!\nTítulo I - Capítulo I - Do ROD\nTítulo II - Capítulo I - Da Organização Didática\nTítulo III - Capítulo I - Do Período Letivo\nTítulo III - Capítulo II - Da Admissão e da Metrícula\nTítulo III - Capítulo III - Do Atendimento Domiciliar\nTítulo III - Capítulo IV - Das Transferências e Adaptações\nTítulo IV - Capítulo I - Das Modalidades\nTítulo IV - Capítulo II - Das Reuniões Pedagógicas\nTítulo V - Capítulo I - Do Estágio Curricular\nTítulo VI - Das Organizações e Orientações Discentes\nTítulo VII - Dos Certificados e Diplomas\nTítulo VIII - Do Intercâmbio Acadêmico\nTítulo IX - Das Disposições Gerais e Transitórias\nSe quiser algo mais específico que isso olha no próprio ROD, ok? Te facilitarei hehe, toma o link: https://bit.ly/3sW1OfL"
+  - text: "Aqui um sumário para você do ROD 2020!\n \nTítulo I - Capítulo I - Do ROD\nTítulo II - Capítulo I - Da Organização Didática\nTítulo III - Capítulo I - Do Período Letivo\nTítulo III - Capítulo II - Da Admissão e da Metrícula\nTítulo III - Capítulo III - Do Atendimento Domiciliar\nTítulo III - Capítulo IV - Das Transferências e Adaptações\nTítulo IV - Capítulo I - Das Modalidades\nTítulo IV - Capítulo II - Das Reuniões Pedagógicas\nTítulo V - Capítulo I - Do Estágio Curricular\nTítulo VI - Das Organizações e Orientações Discentes\nTítulo VII - Dos Certificados e Diplomas\nTítulo VIII - Do Intercâmbio Acadêmico\nTítulo IX - Das Disposições Gerais e Transitórias\n \nSe quiser algo mais específico que isso olha no próprio ROD, ok? Te facilitarei hehe, toma o link: https://bit.ly/3sW1OfL"
   utter_processos_pedagogicos_e_didaticos:
   - text: "Os processos pedagógicos e didáticos são respectivamente, um processo que tem como objetivo promover relações significativas entre o aprendiz e o conhecimento produzido e um processo que se baseia no conjunto de atividades do professor e dos alunos, sob a direção do professor, para que haja uma assimilação ativa de conhecimentos e desenvolvimento das habilidades dos alunos.\nPara mais informações sobre os processos, basta consultar o ROD."
   utter_educacao_nacional_constituicao_form_integral:
@@ -478,47 +485,54 @@ responses:
   utter_educacao_especial:
   - text: "O Ifes, convicto de sua responsabilidade social e em respeito às disposições legais vigentes, deverá garantir o atendimento educacional especializado e o fornecimento ou a concessão de materiais especializados e recursos humanos para os discentes público da Educação Especial, atendendo ao princípio da igualdade, como meio da garantia das condições para o acesso, a permanência, a participação e a aprendizagem. \nAlunos que se enquadram na educação especial recebem estratégias diferenciadas e flexibilização de metodologias visando maximizar seu aprendizado!"
   utter_transferencias:
-  - text: "De qual das seguintes opções sobre transferência você gostaria de saber mais?\n\n- Transferência para o IFES\n- Transferência do IFES para outra instituição\n- Mudança da modalidade entre presencial e a distância\n- Mudança de campus\n- Mudança de turno\n- Mudança de turma\n- Mudança de curso\n- Solicitações Online"
+  - text: "De qual das seguintes opções sobre transferência você gostaria de saber mais?"
   utter_representantes:
-  - text: "De qual das seguintes opções sobre os representantes você gostaria de saber mais sobre?\n\n- Sobre representantes de turma\n- Reuniões dos representantes\n"
+  - text: "De qual das seguintes opções sobre representantes você gostaria de saber mais sobre:"
   utter_avaliacoes:
-  - text: "De qual das seguintes opções sobre as avaliações você gostaria de saber mais sobre?\n\n- Conteúdos avaliações\n- Avaliações para pessoas com necessidades específicas (NE)\n- Prazos das entregas de avaliações\n- Quantidade de avaliações\n- Pontuações das avaliações\n"
+  - text: "De qual das seguintes opções sobre as avaliações você gostaria de saber mais sobre:"
   utter_pontuacoes:
-  - text: "De qual das seguintes opções sobre as pontuações você gostaria de saber mais sobre?\n\n- Pontuação semestral\n- Pontuação trimestral\n- Pontuação bimestral\n- Pontuações das avaliações\n"
+  - text: "De qual das seguintes opções sobre as pontuações você gostaria de saber mais sobre?"
   utter_dependencia:
-  - text: "De qual das seguintes opções sobre a dependência você gostaria de saber mais sobre?\n\n- O que é a dependência\n- Quando fico de dependência\n- Máximo de matérias da dependência\n- Solicitações Online"
+  - text: "De qual das seguintes opções sobre a dependência você gostaria de saber mais sobre?"
   utter_revisao_notas:
-  - text: "De qual das seguintes opções sobre a revisão de nota você gostaria de saber mais sobre?\n\n- Revisão das notas das avaliações\n- Revisão da nota final\n- Solicitações Online"
+  - text: "De qual das seguintes opções sobre a revisão de nota você gostaria de saber mais sobre?"
   utter_dias_letivos:
-  - text: "De qual das seguintes opções sobre os dias letivos você gostaria de saber mais sobre?\n\n- Número de dias letivos\n- Dias e horários que podem ser letivos\n"
+  - text: "De qual das seguintes opções sobre os dias letivos você gostaria de saber mais sobre?"
   utter_matricula:
-  - text: "De qual das seguintes opções sobre a matrícula você gostaria de saber mais sobre?\n\n- O que é a matrícula\n- Documentos necessários para a matrícula\n- Prazos para fazer a matrícula\n- Renovação da matrícula\n- Trancamento de matrícula\n- Cancelamento da matrícula\n- Reintegração da matrícula\n- Solicitações Online"
+  - text: "De qual das seguintes opções sobre a matrícula você gostaria de saber mais sobre?"
   utter_trancamento_matricula:
   - text: "De qual das seguintes opções sobre o trancamento da matrícula você gostaria de saber mais sobre?\n\n- Sobre o trancamento de matrícula\n- Quando não posso trancar a matrícula\n- Solicitações Online"
   utter_reintegracao_matricula:
   - text: "De qual das seguintes opções sobre a reintegração da matrícula você gostaria de saber mais sobre?\n\n- O que é a reintegração da matrícula\n- Quando pode fazer a reintegração da matrícula\n- Solicitações Online"
   utter_regime_domiciliar:
-  - text: "De qual das seguintes opções sobre o regime domiciliar você gostaria de saber mais sobre?\n\n- Sobre o regime domiciliar\n- Quando pode solicitar o regime domiciliar\n- Quando o regime domiciliar é efetivado\n- Prazo para apresentar o laudo médico para o regime domiciliar\n- Sobre o regime domiciliar para grávidas\n- Solicitações Online"
+  - text: "De qual das seguintes opções sobre o regime domiciliar você gostaria de saber mais sobre?"
   utter_plano_ensino:
-  - text: "De qual das seguintes opções sobre o plano de ensino você gostaria de saber mais sobre?\n\n- Conteúdo plano de ensino\n- Datas de entrega e de divulgação dos planos de ensino\n"
+  - text: "De qual das seguintes opções sobre o plano de ensino você gostaria de saber mais sobre?"
   utter_calendario_academico:
-  - text: "De qual das seguintes opções sobre o calendário acadêmico você gostaria de saber mais sobre?\n\n- Conteúdo calendário acadêmico\n- Local do calendário acadêmico\n"
+  - text: "De qual das seguintes opções sobre o calendário acadêmico você gostaria de saber mais sobre?"
   utter_segunda_chance_avaliacao:
-  - text: "De qual das seguintes opções sobre a segunda chance numa avaliação você gostaria de saber mais sobre?\n\n- Segunda chance de avaliação por uma sala inteira\n- Segunda chance de avaliação por um aluno\n- Solicitações Online"
+  - text: "De qual das seguintes opções sobre a segunda chance numa avaliação você gostaria de saber mais sobre?"
   utter_reuniao_pedagogica:
-  - text: "De qual das seguintes opções sobre às reuniões pedagógicas você gostaria de saber mais sobre?\n\n- O que são as reuniões pedagógicas\n- Membros das reuniões pedagógicas\n- Quantidade de reuniões pedagógicas\n- Sobre a reunião pedagógica inicial\n- Sobre a reunião pedagógica intermediária\n- Sobre a reunião pedagógica final\n- Decisões de reprovação na reunião pedagógica\n"
+  - text: "De qual das seguintes opções sobre às reuniões pedagógicas você gostaria de saber mais sobre?"
   utter_rod:
-  - text: "De qual das seguintes opções sobre o ROD você gostaria de saber mais sobre?\n\n- O que é o ROD\n- Validade do ROD atual\n- O capítulo do ROD que fala sobre o ROD\n- Sumário do ROD atual\n"
+  - text: "De qual das seguintes opções sobre o ROD você gostaria de saber mais sobre?"
   utter_sistema_chamados:
   - text: "Você pode fazer as seguintes solicitações no Sistema de Chamados:\n\n- Terceira Etapa de Matrícula,\n- Cancelamento de Matrícula,\n- Matrícula Intercampi,\n- Matrícula/Ajuste de dependência para cursos técnicos concomitantes/subsequentes,\n- Matrícula Eletiva,\n- Reabertura de matrícula,\n- Reintegração de matrícula,\n- Trancamento de matrícula,\n- Atestado de escolaridade,\n- Certidão ou Certificado de conclusão,\n- Certificado de conclusão para o CREA,\n- Colação de grau especial (em casos de urgência, conforme o ROD),\n- Colação de grau regular,\n- Diploma e Histórico Final,\n- Disciplinas Intercampi,\n- Histórico final,\n- Histórico parcial,\n- Mudança de campus, turno e/ou curso,\n- Mudança para nova matriz,\n- Nada Consta para docente,\n- Regime Domiciliar,\n- Revisão de resultado final,\n- Solicitação de aproveitamento de conhecimentos e experiências anteriores.\n\nPara fazer essas e/ou outras solicitações, acesse o site do Sistema de Chamados e faça login com o usuário e senha utilizados no Acadêmico: https://suporte.ifes.edu.br/ensino/front/helpdesk.public.php\n\nEm caso de dúvidas, acesse o manual no link <https://www.serra.ifes.edu.br/images/stories/Navegar_Perfil/Aluno/Manual_Sistemas_de_Chamados_CRA_-_Usuario.pdf>"
   utter_info_ifes:
   - text: O Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo (Ifes) é uma instituição pública federal brasileira, vinculada ao Ministério da Educação, que oferece ensino médio integrado a cursos técnicos, cursos técnicos separados concomitantes ou subsequentes ao ensino médio, cursos superiores, pós, especializações e mestrado e é uma das Instituições de Ensino de maior prestígio no Brasil, além de ensino de excelência, tendo as maiores notas do Enem.
   utter_aluno_ifes:
-  - text: "Ok! Bom, os direitos e deveres dos alunos dos cursos Técnico, de Graduação e de Pós-Graduação têm algumas diferenças. Por isso, preciso que escolha de acordo com o seu curso:\n\nTécnico\nGraduação\nPós-Graduação"
+  - text: "Ok! Bom, os direitos e deveres dos alunos dos cursos Técnico, de Graduação e de Pós-Graduação têm algumas diferenças. Por isso, preciso que escolha de acordo com o seu curso:"
+    buttons:
+      - title: "Técnico"
+        payload: "/rod_tecnico"
+      - title: "Graduação"
+        payload: "/rod_graduacao"
+      - title: "Pós-Graduação"
+        payload: "/rod_pos_graduacao"
   utter_servidor_ifes:
-  - text: "Ok! Bom, eu tenho conhecimentos acerca dos direitos e deveres do aluno que constam no ROD de cada tipo de curso: Técnico, Graduação e Pós-Graduação.\nPosso te encaminhar para a página dos processos seletivos também.\nDigite para onde quer ir:\n\nTécnico\nGraduação\nPós Graduação\nProcessos Seletivos"
+  - text: "Ok! Bom, eu tenho conhecimentos acerca dos direitos e deveres do aluno que constam no ROD de cada tipo de curso: Técnico, Graduação e Pós-Graduação. E também posso te encaminhar para a página dos processos seletivos.\nEscolha para onde quer ir:"
   utter_externo_ifes:
-  - text: "Ok! Bom, eu tenho conhecimentos acerca dos direitos e deveres do aluno que constam no ROD de cada tipo de curso: Técnico, Graduação e Pós-Graduação.\nPosso te encaminhar para a página dos processos seletivos também. Digite para onde quer ir:\n\nTécnico\nGraduação\nPós Graduação\nProcessos Seletivos"
+  - text: "Ok! Bom, eu tenho conhecimentos acerca dos direitos e deveres do aluno que constam no ROD de cada tipo de curso: Técnico, Graduação e Pós-Graduação.\nPosso te encaminhar para a página dos processos seletivos também. Escolha para onde quer ir:"
   utter_rod_tecnico:
   - text: "O Regulamento da Organização Didática (ROD) dos cursos Técnicos, versão 2020, pode ser encontrado no link: https://bit.ly/3sW1OfL \n\nLembrando que podem existir algumas regulamentações internas do campus para complementar alguns assuntos, então você deve procurar o NGP ou o coordenador do seu curso para mais informações."
   utter_menu_tecnico:
@@ -675,6 +689,24 @@ actions:
 - utter_transferencias
 - utter_usuario_esta_feliz
 - action_menu_tecnico
+- action_transferencias
+- action_representantes
+- action_avaliacoes
+- action_segunda_chance_avaliacao
+- action_pontuacoes
+- action_dependencia
+- action_revisao_notas
+- action_dias_letivos
+- action_matricula
+- action_trancamento_matricula
+- action_reintegracao_matricula
+- action_regime_domiciliar
+- action_plano_ensino
+- action_calendario_academico
+- action_reuniao_pedagogica
+- action_rod
+- action_servidor_ifes
+- action_externo_ifes
 forms:
   nome_form:
     primeiro_nome:
