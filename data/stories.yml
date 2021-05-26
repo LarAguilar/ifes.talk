@@ -1086,3 +1086,36 @@ stories:
     - requested_slot: null
   - active_loop: null
   - action: utter_cumprimentar_usuario_nome
+
+- story: Story from Conversation ID 3cdb674078984be5be4363ad2231d946
+  steps:
+  - intent: cumprimento
+  - action: utter_cumprimentar
+  - action: nome_form
+  - active_loop: nome_form
+  - slot_was_set:
+    - requested_slot: primeiro_nome
+  - slot_was_set:
+    - primeiro_nome: Maria
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_cumprimentar_usuario_nome
+  - intent: aluno_ifes
+  - action: utter_aluno_ifes
+  - intent: rod_tecnico
+  - action: utter_rod_tecnico
+  - action: action_menu_tecnico
+  - intent: avaliacoes
+  - action: action_avaliacoes
+  - intent: quantidade_avaliacoes
+  - action: utter_quantidade_avaliacoes
+  - action: utter_continuar_conversa
+  - intent: maximo_materias_dependencia
+  - action: utter_maximo_materias_dependencia
+  - action: utter_continuar_conversa
+  - intent: negar
+  - action: utter_ok
+  - action: utter_despedir
+  - intent: despedir
+  - action: utter_despedir

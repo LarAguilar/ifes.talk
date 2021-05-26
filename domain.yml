@@ -1,182 +1,355 @@
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- afirmar
-- mudanca_turno
-- informar_campus
-- mudanca_curso
-- rod_tecnico
-- cumprimento
-- transferencias
-- aluno_ifes
-- nlu_fallback
-- despedir
-- negar
-- como_esta
-- agradecer
-- meu_objetivo
-- dizer_nada
-- me_ajuda
-- prazer
-- minha_license
-- fallback
-- transferencia_de_outra_escola
-- transferencia_para_outra_escola
-- representantes_reunioes
-- representantes_da_turma
-- mudanca_modalidade_presencial_distancia
-- mudanca_campus
-- mudanca_turma
-- prazos_entregas_avaliacoes
-- conteudos_avaliacoes
-- conteudos_avaliacoes_necessidadades_especificas
-- quantidade_avaliacoes
-- pontuacao_avaliacoes
-- recuperacao
-- pontuacao_semestral
-- periodo_maximo_conclusao
-- ficar_retido
-- promocao_parcial
-- dependencia_condicoes
-- maximo_materias_dependencia
-- revisao_notas_parciais
-- revisao_notas_finais
-- frequencia_minima
-- condicoes_aprovacao
-- dependencia_geral
-- aproveitamento_disciplinas
-- numero_dias_letivos
-- disciplinas_optativas
-- trancamento_matricula_sobre
-- quando_proibido_trancamento_matricula
-- cancelamento_matricula
-- desistente
-- documentos_matricula
-- chamada_suplentes
-- quando_sou_aluno
-- prazo_matricula
-- renovacao_matricula
-- regime_domiciliar_efetivacao
-- regime_domiciliar_condicoes
-- regime_domiciliar_sobre
-- prazo_regime_domiciliar_laudo_medico
-- regime_domiciliar_gravidas
-- rod_geral
-- plano_ensino_contem
-- plano_ensino_datas
-- coeficiente_rendimento
-- oferta_cursos
-- tempo_oferta_aulas
-- calendario_academico_conteudo
-- calendario_academico_localizacao
-- ifes_condicoes
-- preenchimento_vagas_discentes_ifes
-- matricula_sobre
-- reintegracao_matricula_sobre
-- reintegracao_matricula_condicoes
-- segunda_chance_avaliacao_turma
-- segunda_chance_avaliacao_discente
-- estudantes_distancia_avaliacao_rendimento
-- pontuacao_trimestral
-- pontuacao_bimestral
-- registro_informacoes_no_academico
-- reuniao_pedagogica_sobre
-- reuniao_pedagogica_inicial
-- reuniao_pedagogica_intermediaria
-- reuniao_pedagogica_final
-- reuniao_pedagogica_decisao_final
-- reuniao_pedagogica_membros
-- reuniao_pedagogica_quantidade
-- monitoria
-- estagio
-- corpo_discente
-- rod_2020_validade
-- tit_cap_rod
-- tit_cap_cursos_curriculos_planos_ensino
-- tit_cap_periodo_letivo
-- tit_cap_admissao_matricula
-- tit_cap_atendimento_domiciliar
-- tit_cap_transferencias_adaptacoes
-- tit_cap_modalidades
-- tit_cap_reunioes_pedagogicas
-- tit_outras_atividades_ensino
-- tit_cap_estagio_curricular
-- tit_organizacoes_orientacoes_discentes
-- tit_certificados_diplomas
-- tit_intercambio_academico
-- tit_disposicoes_gerais_transitorias
-- sumario_rod
-- processos_pedagogicos_e_didaticos
-- educacao_nacional_constituicao_form_integral
-- gestao_educacional
-- educacao_profissional
-- responsabilidade_social
-- educacao_especial
-- representantes
-- avaliacoes
-- pontuacoes
-- dependencia
-- revisao_notas
-- dias_letivos
-- matricula
-- trancamento_matricula
-- reintegracao_matricula
-- regime_domiciliar
-- plano_ensino
-- calendario_academico
-- segunda_chance_avaliacao
-- reuniao_pedagogica
-- rod
-- minha_religiao
-- musica
-- me_elogiar
-- meu_genero
-- saber_piada
-- saber_as_horas
-- esta_feliz
-- esta_triste
-- SC_geral
-- SC_matricula
-- SC_terceira_etapa_matricula
-- SC_cancelamento_matricula
-- SC_matricula_intercampi
-- SC_matricula_dependencia
-- SC_ajuste_dp
-- SC_matricula_eletiva
-- SC_reabertura_matricula
-- SC_trancamento_matricula
-- SC_reintegracao_matricula
-- SC_atestado_escolaridade
-- SC_certidao_conclusao
-- SC_certificado_conclusao_crea
-- SC_colacao_grau_especial
-- SC_colacao_grau
-- SC_diploma_historico_final
-- SC_disciplina_intercampi
-- SC_historico_final
-- SC_historico_parcial
-- SC_mudanca_campus_turno_curso
-- SC_mudanca_matriz
-- SC_nada_consta
-- SC_regime_domiciliar
-- SC_revisao_resultado_final
-- SC_aproveitamento
-- info_ifes
-- servidor_ifes
-- externo_ifes
-- rod_graduacao
-- rod_pos_graduacao
-- processo_seletivo
-- menu
-- voltar
-- session_start
+- afirmar:
+    use_entities: true
+- mudanca_turno:
+    use_entities: true
+- informar_campus:
+    use_entities: true
+- mudanca_curso:
+    use_entities: true
+- rod_tecnico:
+    use_entities: true
+- cumprimento:
+    use_entities: true
+- transferencias:
+    use_entities: true
+- aluno_ifes:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- despedir:
+    use_entities: true
+- negar:
+    use_entities: true
+- como_esta:
+    use_entities: true
+- agradecer:
+    use_entities: true
+- meu_objetivo:
+    use_entities: true
+- dizer_nada:
+    use_entities: true
+- me_ajuda:
+    use_entities: true
+- prazer:
+    use_entities: true
+- minha_license:
+    use_entities: true
+- fallback:
+    use_entities: true
+- transferencia_de_outra_escola:
+    use_entities: true
+- transferencia_para_outra_escola:
+    use_entities: true
+- representantes_reunioes:
+    use_entities: true
+- representantes_da_turma:
+    use_entities: true
+- mudanca_modalidade_presencial_distancia:
+    use_entities: true
+- mudanca_campus:
+    use_entities: true
+- mudanca_turma:
+    use_entities: true
+- prazos_entregas_avaliacoes:
+    use_entities: true
+- conteudos_avaliacoes:
+    use_entities: true
+- conteudos_avaliacoes_necessidadades_especificas:
+    use_entities: true
+- quantidade_avaliacoes:
+    use_entities: true
+- pontuacao_avaliacoes:
+    use_entities: true
+- recuperacao:
+    use_entities: true
+- pontuacao_semestral:
+    use_entities: true
+- periodo_maximo_conclusao:
+    use_entities: true
+- ficar_retido:
+    use_entities: true
+- promocao_parcial:
+    use_entities: true
+- dependencia_condicoes:
+    use_entities: true
+- maximo_materias_dependencia:
+    use_entities: true
+- revisao_notas_parciais:
+    use_entities: true
+- revisao_notas_finais:
+    use_entities: true
+- frequencia_minima:
+    use_entities: true
+- condicoes_aprovacao:
+    use_entities: true
+- dependencia_geral:
+    use_entities: true
+- aproveitamento_disciplinas:
+    use_entities: true
+- numero_dias_letivos:
+    use_entities: true
+- disciplinas_optativas:
+    use_entities: true
+- trancamento_matricula_sobre:
+    use_entities: true
+- quando_proibido_trancamento_matricula:
+    use_entities: true
+- cancelamento_matricula:
+    use_entities: true
+- desistente:
+    use_entities: true
+- documentos_matricula:
+    use_entities: true
+- chamada_suplentes:
+    use_entities: true
+- quando_sou_aluno:
+    use_entities: true
+- prazo_matricula:
+    use_entities: true
+- renovacao_matricula:
+    use_entities: true
+- regime_domiciliar_efetivacao:
+    use_entities: true
+- regime_domiciliar_condicoes:
+    use_entities: true
+- regime_domiciliar_sobre:
+    use_entities: true
+- prazo_regime_domiciliar_laudo_medico:
+    use_entities: true
+- regime_domiciliar_gravidas:
+    use_entities: true
+- rod_geral:
+    use_entities: true
+- plano_ensino_contem:
+    use_entities: true
+- plano_ensino_datas:
+    use_entities: true
+- coeficiente_rendimento:
+    use_entities: true
+- oferta_cursos:
+    use_entities: true
+- tempo_oferta_aulas:
+    use_entities: true
+- calendario_academico_conteudo:
+    use_entities: true
+- calendario_academico_localizacao:
+    use_entities: true
+- ifes_condicoes:
+    use_entities: true
+- preenchimento_vagas_discentes_ifes:
+    use_entities: true
+- matricula_sobre:
+    use_entities: true
+- reintegracao_matricula_sobre:
+    use_entities: true
+- reintegracao_matricula_condicoes:
+    use_entities: true
+- segunda_chance_avaliacao_turma:
+    use_entities: true
+- segunda_chance_avaliacao_discente:
+    use_entities: true
+- estudantes_distancia_avaliacao_rendimento:
+    use_entities: true
+- pontuacao_trimestral:
+    use_entities: true
+- pontuacao_bimestral:
+    use_entities: true
+- registro_informacoes_no_academico:
+    use_entities: true
+- reuniao_pedagogica_sobre:
+    use_entities: true
+- reuniao_pedagogica_inicial:
+    use_entities: true
+- reuniao_pedagogica_intermediaria:
+    use_entities: true
+- reuniao_pedagogica_final:
+    use_entities: true
+- reuniao_pedagogica_decisao_final:
+    use_entities: true
+- reuniao_pedagogica_membros:
+    use_entities: true
+- reuniao_pedagogica_quantidade:
+    use_entities: true
+- monitoria:
+    use_entities: true
+- estagio:
+    use_entities: true
+- corpo_discente:
+    use_entities: true
+- rod_2020_validade:
+    use_entities: true
+- tit_cap_rod:
+    use_entities: true
+- tit_cap_cursos_curriculos_planos_ensino:
+    use_entities: true
+- tit_cap_periodo_letivo:
+    use_entities: true
+- tit_cap_admissao_matricula:
+    use_entities: true
+- tit_cap_atendimento_domiciliar:
+    use_entities: true
+- tit_cap_transferencias_adaptacoes:
+    use_entities: true
+- tit_cap_modalidades:
+    use_entities: true
+- tit_cap_reunioes_pedagogicas:
+    use_entities: true
+- tit_outras_atividades_ensino:
+    use_entities: true
+- tit_cap_estagio_curricular:
+    use_entities: true
+- tit_organizacoes_orientacoes_discentes:
+    use_entities: true
+- tit_certificados_diplomas:
+    use_entities: true
+- tit_intercambio_academico:
+    use_entities: true
+- tit_disposicoes_gerais_transitorias:
+    use_entities: true
+- sumario_rod:
+    use_entities: true
+- processos_pedagogicos_e_didaticos:
+    use_entities: true
+- educacao_nacional_constituicao_form_integral:
+    use_entities: true
+- gestao_educacional:
+    use_entities: true
+- educacao_profissional:
+    use_entities: true
+- responsabilidade_social:
+    use_entities: true
+- educacao_especial:
+    use_entities: true
+- representantes:
+    use_entities: true
+- avaliacoes:
+    use_entities: true
+- pontuacoes:
+    use_entities: true
+- dependencia:
+    use_entities: true
+- revisao_notas:
+    use_entities: true
+- dias_letivos:
+    use_entities: true
+- matricula:
+    use_entities: true
+- trancamento_matricula:
+    use_entities: true
+- reintegracao_matricula:
+    use_entities: true
+- regime_domiciliar:
+    use_entities: true
+- plano_ensino:
+    use_entities: true
+- calendario_academico:
+    use_entities: true
+- segunda_chance_avaliacao:
+    use_entities: true
+- reuniao_pedagogica:
+    use_entities: true
+- rod:
+    use_entities: true
+- minha_religiao:
+    use_entities: true
+- musica:
+    use_entities: true
+- me_elogiar:
+    use_entities: true
+- meu_genero:
+    use_entities: true
+- saber_piada:
+    use_entities: true
+- saber_as_horas:
+    use_entities: true
+- esta_feliz:
+    use_entities: true
+- esta_triste:
+    use_entities: true
+- SC_geral:
+    use_entities: true
+- SC_matricula:
+    use_entities: true
+- SC_terceira_etapa_matricula:
+    use_entities: true
+- SC_cancelamento_matricula:
+    use_entities: true
+- SC_matricula_intercampi:
+    use_entities: true
+- SC_matricula_dependencia:
+    use_entities: true
+- SC_ajuste_dp:
+    use_entities: true
+- SC_matricula_eletiva:
+    use_entities: true
+- SC_reabertura_matricula:
+    use_entities: true
+- SC_trancamento_matricula:
+    use_entities: true
+- SC_reintegracao_matricula:
+    use_entities: true
+- SC_atestado_escolaridade:
+    use_entities: true
+- SC_certidao_conclusao:
+    use_entities: true
+- SC_certificado_conclusao_crea:
+    use_entities: true
+- SC_colacao_grau_especial:
+    use_entities: true
+- SC_colacao_grau:
+    use_entities: true
+- SC_diploma_historico_final:
+    use_entities: true
+- SC_disciplina_intercampi:
+    use_entities: true
+- SC_historico_final:
+    use_entities: true
+- SC_historico_parcial:
+    use_entities: true
+- SC_mudanca_campus_turno_curso:
+    use_entities: true
+- SC_mudanca_matriz:
+    use_entities: true
+- SC_nada_consta:
+    use_entities: true
+- SC_regime_domiciliar:
+    use_entities: true
+- SC_revisao_resultado_final:
+    use_entities: true
+- SC_aproveitamento:
+    use_entities: true
+- info_ifes:
+    use_entities: true
+- servidor_ifes:
+    use_entities: true
+- externo_ifes:
+    use_entities: true
+- rod_graduacao:
+    use_entities: true
+- rod_pos_graduacao:
+    use_entities: true
+- processo_seletivo:
+    use_entities: true
+- menu:
+    use_entities: true
+- voltar:
+    use_entities: true
+- session_start:
+    use_entities: true
 entities:
 - campus
 - nome_usuario
 slots:
   campus:
-    type: categorical
+    type: rasa.shared.core.slots.CategoricalSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: false
     values:
     - alegre
@@ -202,48 +375,70 @@ slots:
     - vitória
     - __other__
   check_aproveitamento_disciplinas:
-    type: bool
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
   check_calendario_academico_localizacao:
-    type: bool
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
   check_chamada_suplentes:
-    type: bool
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
   check_modalidade:
-    type: bool
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
   check_mudar_curso:
-    type: bool
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
   check_reintegracao_matricula_condicoes:
-    type: bool
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
   check_reuniao_pedagogica_quantidade:
-    type: bool
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
   check_trancamento_matricula_sobre:
-    type: bool
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
   primeiro_nome:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
   requested_slot:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: false
   uncheck_all:
-    type: bool
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
 responses:
   utter_cumprimentar_usuario_nome:
-  - text: 'Prazer, {primeiro_nome}! Agora, me fala se você é aluno(a) do ifes, servidor(a) do ifes ou não é do ifes:'
-    buttons:
-    - title: "Aluno (a)"
-      payload: "/aluno_ifes"
-    - title: "Servidor (a)"
-      payload: "/servidor_ifes"
-    - title: "Não sou do ifes"
-      payload: "/externo_ifes"
+  - buttons:
+    - payload: /aluno_ifes
+      title: Aluno (a)
+    - payload: /servidor_ifes
+      title: Servidor (a)
+    - payload: /externo_ifes
+      title: Não sou do ifes
+    text: 'Prazer, {primeiro_nome}! Agora, me fala se você é aluno(a) do ifes, servidor(a) do ifes ou não é do ifes:'
   utter_despedir:
   - text: "Foi um prazer te ajudar! Sempre que tiver alguma dúvida, volte aqui :)\n\nAté logo!"
   - text: "Foi um prazer te ajudar! Sempre que precisar, volte aqui :D\n\nAté a próxima!"
@@ -485,50 +680,50 @@ responses:
   utter_educacao_especial:
   - text: "O Ifes, convicto de sua responsabilidade social e em respeito às disposições legais vigentes, deverá garantir o atendimento educacional especializado e o fornecimento ou a concessão de materiais especializados e recursos humanos para os discentes público da Educação Especial, atendendo ao princípio da igualdade, como meio da garantia das condições para o acesso, a permanência, a participação e a aprendizagem. \nAlunos que se enquadram na educação especial recebem estratégias diferenciadas e flexibilização de metodologias visando maximizar seu aprendizado!"
   utter_transferencias:
-  - text: "De qual das seguintes opções sobre transferência você gostaria de saber mais?"
+  - text: De qual das seguintes opções sobre transferência você gostaria de saber mais?
   utter_representantes:
-  - text: "De qual das seguintes opções sobre representantes você gostaria de saber mais sobre:"
+  - text: 'De qual das seguintes opções sobre representantes você gostaria de saber mais sobre:'
   utter_avaliacoes:
-  - text: "De qual das seguintes opções sobre as avaliações você gostaria de saber mais sobre:"
+  - text: 'De qual das seguintes opções sobre as avaliações você gostaria de saber mais sobre:'
   utter_pontuacoes:
-  - text: "De qual das seguintes opções sobre as pontuações você gostaria de saber mais sobre?"
+  - text: De qual das seguintes opções sobre as pontuações você gostaria de saber mais sobre?
   utter_dependencia:
-  - text: "De qual das seguintes opções sobre a dependência você gostaria de saber mais sobre?"
+  - text: De qual das seguintes opções sobre a dependência você gostaria de saber mais sobre?
   utter_revisao_notas:
-  - text: "De qual das seguintes opções sobre a revisão de nota você gostaria de saber mais sobre?"
+  - text: De qual das seguintes opções sobre a revisão de nota você gostaria de saber mais sobre?
   utter_dias_letivos:
-  - text: "De qual das seguintes opções sobre os dias letivos você gostaria de saber mais sobre?"
+  - text: De qual das seguintes opções sobre os dias letivos você gostaria de saber mais sobre?
   utter_matricula:
-  - text: "De qual das seguintes opções sobre a matrícula você gostaria de saber mais sobre?"
+  - text: De qual das seguintes opções sobre a matrícula você gostaria de saber mais sobre?
   utter_trancamento_matricula:
   - text: "De qual das seguintes opções sobre o trancamento da matrícula você gostaria de saber mais sobre?\n\n- Sobre o trancamento de matrícula\n- Quando não posso trancar a matrícula\n- Solicitações Online"
   utter_reintegracao_matricula:
   - text: "De qual das seguintes opções sobre a reintegração da matrícula você gostaria de saber mais sobre?\n\n- O que é a reintegração da matrícula\n- Quando pode fazer a reintegração da matrícula\n- Solicitações Online"
   utter_regime_domiciliar:
-  - text: "De qual das seguintes opções sobre o regime domiciliar você gostaria de saber mais sobre?"
+  - text: De qual das seguintes opções sobre o regime domiciliar você gostaria de saber mais sobre?
   utter_plano_ensino:
-  - text: "De qual das seguintes opções sobre o plano de ensino você gostaria de saber mais sobre?"
+  - text: De qual das seguintes opções sobre o plano de ensino você gostaria de saber mais sobre?
   utter_calendario_academico:
-  - text: "De qual das seguintes opções sobre o calendário acadêmico você gostaria de saber mais sobre?"
+  - text: De qual das seguintes opções sobre o calendário acadêmico você gostaria de saber mais sobre?
   utter_segunda_chance_avaliacao:
-  - text: "De qual das seguintes opções sobre a segunda chance numa avaliação você gostaria de saber mais sobre?"
+  - text: De qual das seguintes opções sobre a segunda chance numa avaliação você gostaria de saber mais sobre?
   utter_reuniao_pedagogica:
-  - text: "De qual das seguintes opções sobre às reuniões pedagógicas você gostaria de saber mais sobre?"
+  - text: De qual das seguintes opções sobre às reuniões pedagógicas você gostaria de saber mais sobre?
   utter_rod:
-  - text: "De qual das seguintes opções sobre o ROD você gostaria de saber mais sobre?"
+  - text: De qual das seguintes opções sobre o ROD você gostaria de saber mais sobre?
   utter_sistema_chamados:
   - text: "Você pode fazer as seguintes solicitações no Sistema de Chamados:\n\n- Terceira Etapa de Matrícula,\n- Cancelamento de Matrícula,\n- Matrícula Intercampi,\n- Matrícula/Ajuste de dependência para cursos técnicos concomitantes/subsequentes,\n- Matrícula Eletiva,\n- Reabertura de matrícula,\n- Reintegração de matrícula,\n- Trancamento de matrícula,\n- Atestado de escolaridade,\n- Certidão ou Certificado de conclusão,\n- Certificado de conclusão para o CREA,\n- Colação de grau especial (em casos de urgência, conforme o ROD),\n- Colação de grau regular,\n- Diploma e Histórico Final,\n- Disciplinas Intercampi,\n- Histórico final,\n- Histórico parcial,\n- Mudança de campus, turno e/ou curso,\n- Mudança para nova matriz,\n- Nada Consta para docente,\n- Regime Domiciliar,\n- Revisão de resultado final,\n- Solicitação de aproveitamento de conhecimentos e experiências anteriores.\n\nPara fazer essas e/ou outras solicitações, acesse o site do Sistema de Chamados e faça login com o usuário e senha utilizados no Acadêmico: https://suporte.ifes.edu.br/ensino/front/helpdesk.public.php\n\nEm caso de dúvidas, acesse o manual no link <https://www.serra.ifes.edu.br/images/stories/Navegar_Perfil/Aluno/Manual_Sistemas_de_Chamados_CRA_-_Usuario.pdf>"
   utter_info_ifes:
   - text: O Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo (Ifes) é uma instituição pública federal brasileira, vinculada ao Ministério da Educação, que oferece ensino médio integrado a cursos técnicos, cursos técnicos separados concomitantes ou subsequentes ao ensino médio, cursos superiores, pós, especializações e mestrado e é uma das Instituições de Ensino de maior prestígio no Brasil, além de ensino de excelência, tendo as maiores notas do Enem.
   utter_aluno_ifes:
-  - text: "Ok! Bom, os direitos e deveres dos alunos dos cursos Técnico, de Graduação e de Pós-Graduação têm algumas diferenças. Por isso, preciso que escolha de acordo com o seu curso:"
-    buttons:
-      - title: "Técnico"
-        payload: "/rod_tecnico"
-      - title: "Graduação"
-        payload: "/rod_graduacao"
-      - title: "Pós-Graduação"
-        payload: "/rod_pos_graduacao"
+  - buttons:
+    - payload: /rod_tecnico
+      title: Técnico
+    - payload: /rod_graduacao
+      title: Graduação
+    - payload: /rod_pos_graduacao
+      title: Pós-Graduação
+    text: 'Ok! Bom, os direitos e deveres dos alunos dos cursos Técnico, de Graduação e de Pós-Graduação têm algumas diferenças. Por isso, preciso que escolha de acordo com o seu curso:'
   utter_servidor_ifes:
   - text: "Ok! Bom, eu tenho conhecimentos acerca dos direitos e deveres do aluno que constam no ROD de cada tipo de curso: Técnico, Graduação e Pós-Graduação. E também posso te encaminhar para a página dos processos seletivos.\nEscolha para onde quer ir:"
   utter_externo_ifes:
@@ -536,7 +731,7 @@ responses:
   utter_rod_tecnico:
   - text: "O Regulamento da Organização Didática (ROD) dos cursos Técnicos, versão 2020, pode ser encontrado no link: https://bit.ly/3sW1OfL \n\nLembrando que podem existir algumas regulamentações internas do campus para complementar alguns assuntos, então você deve procurar o NGP ou o coordenador do seu curso para mais informações."
   utter_menu_tecnico:
-  - text: "Você pode tirar suas dúvidas clicando nos botões abaixo ou digitando. Fique a vontade para escolher xD"
+  - text: Você pode tirar suas dúvidas clicando nos botões abaixo ou digitando. Fique a vontade para escolher xD
   utter_rod_graduacao:
   - text: "Ainda estou estudando o Regulamento da Organização Didática (ROD) dos cursos de Graduação.\nEm breve serei especialista nele e poderei te passar as informações corretas!\nEnquanto isso, você pode acessar o ROD pelo link https://bit.ly/3wAxCsO \n\nGostaria de saber sobre algum outro ROD?"
   utter_rod_pos_graduacao:
@@ -711,4 +906,5 @@ forms:
   nome_form:
     primeiro_nome:
     - type: from_text
+e2e_actions: []
 version: '2.0'
