@@ -30,21 +30,20 @@ class ActionMenuTecnico(Action):
   ) -> List[EventType]:
 
         dispatcher.utter_message(template = "utter_menu_tecnico", buttons = [
-                {"payload": "/transferencias", "title": "Transferências/Mudanças"},
-                {"payload": "/representantes", "title": "Representante de Turma"},
                 {"payload": "/avaliacoes", "title": "Avaliações"},
-                {"payload": "/pontuacoes", "title": "Pontuações"},
+                {"payload": "/calendario_academico", "title": "Calendário Acadêmico"},
                 {"payload": "/dependencia", "title": "Dependência"},
-                {"payload": "/revisao_notas", "title": "Revisão de Notas"},
                 {"payload": "/dias_letivos", "title": "Dias Letivos"},
                 {"payload": "/matricula", "title": "Matrícula"},
-                {"payload": "/regime_domiciliar", "title": "Regime Domiciliar"},
                 {"payload": "/plano_ensino", "title": "Plano de Ensino"},
-                {"payload": "/calendario_academico", "title": "Calendário Acadêmico"},
+                {"payload": "/pontuacoes", "title": "Pontuações"},
+                {"payload": "/regime_domiciliar", "title": "Regime Domiciliar"},
+                {"payload": "/representantes", "title": "Representante de Turma"},
                 {"payload": "/reuniao_pedagogica", "title": "Reuniões Pedagógicas"},
+                {"payload": "/revisao_notas", "title": "Revisão de Notas"},
                 {"payload": "/rod", "title": "ROD"},
                 {"payload": "/SC_geral", "title": "Solicitações Online"}
-            ], button_type = "vertical")
+            ], button_type = "reply")
         return []
 
 
