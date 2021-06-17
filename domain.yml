@@ -582,7 +582,7 @@ responses:
   utter_regime_domiciliar_gravidas:
   - text: "A aluna gestante terá direito a 3 meses de atendimento domiciliar a partir do oitavo mês de gestação.\n\nPara mais informações, basta consultar o artigo 59 § 1° do ROD."
   utter_cumprimentar:
-  - text: "Olá! Eu sou o ifes.talk, assistente virtual do Instituto Federal do ES (Ifes). Estou no Ifes desde 2018, então já sei algumas coisas sobre ele, mas não tudo ok?! No momento, tenho mais conhecimento sobre direitos e deveres dos alunos! Estou aqui para ajudar, então vamos lá!\n\nVocê pode acessar todos os ROD's no link https://bit.ly/3s1hSM2 \n\nE vale lembrar também, que podem existir algumas regulamentações internas do campus para complementar alguns assuntos, então você deve procurar o NGP ou o coordenador do seu curso para mais informações.\nQualquer hora que quiser ajuda, só pedir!\n\nPara começar, me fale seu primeiro nome:"
+  - text: "Olá! Eu sou o ifes.talk, assistente virtual do Instituto Federal do ES (Ifes). Estou no Ifes desde 2018, então já sei algumas coisas sobre ele, mas não tudo ok?! No momento, tenho mais conhecimento sobre direitos e deveres dos alunos! Estou aqui para ajudar, então vamos lá!\n\nVocê pode acessar todos os ROD's (Regulamentos da Organização Didática) no link https://bit.ly/3s1hSM2 \n\nE vale lembrar também, que podem existir algumas regulamentações internas do campus para complementar alguns assuntos, então você deve procurar o NGP (Núcleo de Gestão Pedagógica) ou o coordenador do seu curso para mais informações.\nQualquer hora que quiser ajuda, só pedir!\n\nPara começar, me fale seu primeiro nome:"
   utter_rod_geral:
   - text: "O Regulamento da Organização Didática dos Cursos Técnicos, mais conhecido como ROD, é um documento do IFES que possui todas as regras e processos didáticos e pedagógicos que devem ser seguidos dentro do IFES.\nPara mais informações, basta consultar o artigo 1° do ROD."
   utter_plano_ensino_contem:
@@ -729,7 +729,7 @@ responses:
   utter_externo_ifes:
   - text: "Ok! Bom, eu tenho conhecimentos acerca dos direitos e deveres do aluno que constam no ROD de cada tipo de curso: Técnico, Graduação e Pós-Graduação.\nPosso te encaminhar para a página dos processos seletivos também. Escolha para onde quer ir:"
   utter_rod_tecnico:
-  - text: "O Regulamento da Organização Didática (ROD) dos cursos Técnicos, versão 2020, pode ser encontrado no link: https://bit.ly/3sW1OfL \n\nLembrando que podem existir algumas regulamentações internas do campus para complementar alguns assuntos, então você deve procurar o NGP ou o coordenador do seu curso para mais informações."
+  - text: "O Regulamento da Organização Didática (ROD) dos cursos Técnicos, versão 2020, pode ser encontrado no link: https://bit.ly/3sW1OfL"
   utter_menu_tecnico:
   - text: Você pode tirar suas dúvidas clicando nos botões abaixo ou digitando. Fique a vontade para escolher xD
   utter_rod_graduacao:
