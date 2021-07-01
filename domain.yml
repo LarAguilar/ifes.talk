@@ -733,6 +733,11 @@ responses:
   utter_menu_tecnico:
   - text: Você pode tirar suas dúvidas clicando nos botões abaixo ou digitando. Fique a vontade para escolher xD
   utter_rod_graduacao:
+  - buttons:
+    - payload: /afirmar
+      title: Sim
+    - payload: /negar
+      title: Não
   - text: "Ainda estou estudando o Regulamento da Organização Didática (ROD) dos cursos de Graduação.\nEm breve serei especialista nele e poderei te passar as informações corretas!\nEnquanto isso, você pode acessar o ROD pelo link https://bit.ly/3wAxCsO \n\nGostaria de saber sobre algum outro ROD?"
   utter_rod_pos_graduacao:
   - text: "Ainda estou estudando o Regulamento da Organização Didática (ROD) dos cursos de Pós-Graduação.\nEm breve serei especialista nele e poderei te passar as informações corretas!\nEnquanto isso, você pode acessar o ROD pelo link https://bit.ly/3s0j0j4 \nGostaria de saber sobre algum outro ROD?"

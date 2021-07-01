@@ -452,6 +452,12 @@ nlu:
     - como o [líder] é eleito
     - minha turma tem que ter um [líder]?
     - Sobre [representante de turma]
+    - quero ser [lider]
+    - quero ser [representante]
+    - quero ser [lider de turma]
+    - quero ser [representante de turma]
+    - como faço pra ser [lider]
+    - como faco pra ser [representante de turma]
 - intent: mudanca_modalidade_presencial_distancia
   examples: |
     - [Presencial]/[distancia]
